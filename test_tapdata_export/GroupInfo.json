@@ -6,7 +6,7 @@
       "branch" : "main",
       "repoUrl" : "https://github.com/tap-jason/daas-test.git"
     },
-    "id" : "6a1019bde9ef93a25c3fda83",
+    "id" : "6a101b97e9ef93a25c406c28",
     "name" : "test",
     "resetTaskList" : [ "6a101695e9ef93a25c3eeb09" ],
     "resourceItemList" : [ {
@@ -17,6 +17,10 @@
       "id" : "6a101783e9ef93a25c3f40ef",
       "name" : "cicd-api",
       "type" : "MODULE"
+    }, {
+      "id" : "6a101b85e9ef93a25c406acf",
+      "name" : "jason-cicd - Copy",
+      "type" : "MIGRATE_TASK"
     } ],
     "user_id" : "62bc5008d4958d013d97c7a6"
   }
