@@ -6,13 +6,13 @@
       "branch" : "main",
       "repoUrl" : "https://github.com/tap-jason/daas-test.git"
     },
-    "id" : "6a0ee38642bfb5b129072005",
+    "id" : "6a102b7be9ef93a25c468a3b",
     "name" : "daas-test",
-    "resetTaskList" : [ ],
+    "resetTaskList" : [ "6a102b10e9ef93a25c46526b" ],
     "resourceItemList" : [ {
-      "id" : "6a0edf9342bfb5b12904ffd5",
-      "name" : "mssql to fdm",
-      "type" : "SYNC_TASK"
+      "id" : "6a102b10e9ef93a25c46526b",
+      "name" : "复制任务--cicd",
+      "type" : "MIGRATE_TASK"
     } ],
     "user_id" : "62bc5008d4958d013d97c7a6"
   }
