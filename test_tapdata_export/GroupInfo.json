@@ -6,13 +6,17 @@
       "branch" : "main",
       "repoUrl" : "https://github.com/tap-jason/daas-test.git"
     },
-    "id" : "6a101422e9ef93a25c3e52d4",
+    "id" : "6a1019bde9ef93a25c3fda83",
     "name" : "test",
-    "resetTaskList" : [ ],
+    "resetTaskList" : [ "6a101695e9ef93a25c3eeb09" ],
     "resourceItemList" : [ {
-      "id" : "6a0d8a6a92b63f47f29739a4",
-      "name" : "HPI_TO_FDM - Demo",
+      "id" : "6a101695e9ef93a25c3eeb09",
+      "name" : "jason-cicd",
       "type" : "MIGRATE_TASK"
+    }, {
+      "id" : "6a101783e9ef93a25c3f40ef",
+      "name" : "cicd-api",
+      "type" : "MODULE"
     } ],
     "user_id" : "62bc5008d4958d013d97c7a6"
   }
