@@ -6,13 +6,17 @@
       "branch" : "main",
       "repoUrl" : "https://github.com/tap-jason/daas-test.git"
     },
-    "id" : "6a102b7be9ef93a25c468a3b",
+    "id" : "6a102ce7e9ef93a25c46ff9f",
     "name" : "daas-test",
-    "resetTaskList" : [ "6a102b10e9ef93a25c46526b" ],
+    "resetTaskList" : [ "6a102cb0e9ef93a25c46fcf0" ],
     "resourceItemList" : [ {
       "id" : "6a102b10e9ef93a25c46526b",
       "name" : "复制任务--cicd",
       "type" : "MIGRATE_TASK"
+    }, {
+      "id" : "6a102cb0e9ef93a25c46fcf0",
+      "name" : "开发任务-cicd",
+      "type" : "SYNC_TASK"
     } ],
     "user_id" : "62bc5008d4958d013d97c7a6"
   }
