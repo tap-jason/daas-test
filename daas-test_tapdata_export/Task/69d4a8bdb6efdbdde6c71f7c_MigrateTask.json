@@ -66,27 +66,33 @@
       "sort" : 4,
       "type" : "TASK",
       "unit" : "SECOND"
+    }, {
+      "interval" : 300,
+      "key" : "TASK_SOURCE_NO_INCREMENTAL_EVENT",
+      "notify" : [ "SYSTEM" ],
+      "open" : true,
+      "sort" : 5,
+      "type" : "TASK",
+      "unit" : "SECOND"
     } ],
     "attrs" : { },
-    "autoIncrementalBatchSize" : true,
     "autoInspect" : false,
     "blankLog" : false,
     "canOpenInspect" : false,
     "cdctask" : false,
-    "createTime" : 1779413809195,
+    "createTime" : 1775544509715,
     "createUser" : "admin@admin.com",
+    "crontabExpression" : "",
     "crontabExpressionFlag" : false,
     "dag" : {
       "edges" : [ {
         "disabled" : false,
-        "id" : "55e41c83-7328-4510-9411-0c3e3acc7159",
-        "source" : "8330d523-5d68-4694-b5e8-a6bed2458f41",
-        "target" : "e7b83f2d-4cea-43fa-ba10-c823d63e2943"
+        "source" : "63ad48af-5e96-411f-a3d7-10aa6b6cff50",
+        "target" : "2e1f82ed-2bf3-489a-a2a2-f8f9e9c01b65"
       }, {
         "disabled" : false,
-        "id" : "270f1286-89bd-4bee-a53f-1546900ea0b7",
-        "source" : "2e17f897-9531-4f90-8eea-dc41e683046a",
-        "target" : "8330d523-5d68-4694-b5e8-a6bed2458f41"
+        "source" : "113d99a2-b0f3-46a7-a838-f3391c0208f7",
+        "target" : "63ad48af-5e96-411f-a3d7-10aa6b6cff50"
       } ],
       "nodes" : [ {
         "alarmRules" : [ {
@@ -99,28 +105,20 @@
         "alarmSettings" : [ {
           "interval" : 300,
           "key" : "PROCESSNODE_AVERAGE_HANDLE_CONSUME",
-          "notify" : [ "SYSTEM", "EMAIL" ],
+          "notify" : [ "SYSTEM" ],
           "open" : true,
           "sort" : 1,
           "type" : "PROCESSNODE",
           "unit" : "SECOND"
         } ],
-        "attrs" : {
-          "capabilities" : [ ],
-          "position" : [ 330, 50 ]
-        },
         "catalog" : "processor",
         "concurrentNum" : 2,
         "disabled" : false,
         "elementType" : "Node",
-        "id" : "8330d523-5d68-4694-b5e8-a6bed2458f41",
+        "id" : "63ad48af-5e96-411f-a3d7-10aa6b6cff50",
         "isTransformed" : false,
         "name" : "表编辑",
         "prefix" : "FDM_CMS_",
-        "replaceAfter" : "",
-        "suffix" : "",
-        "tableNames" : [ ],
-        "transferCase" : "",
         "type" : "table_rename_processor"
       }, {
         "alarmRules" : [ {
@@ -133,7 +131,7 @@
         "alarmSettings" : [ {
           "interval" : 300,
           "key" : "DATANODE_AVERAGE_HANDLE_CONSUME",
-          "notify" : [ "SYSTEM", "EMAIL" ],
+          "notify" : [ "SYSTEM" ],
           "open" : true,
           "sort" : 4,
           "type" : "DATANODE",
@@ -141,21 +139,99 @@
         } ],
         "applyCompareRule" : false,
         "attrs" : {
-          "accessNodeProcessId" : "",
-          "accessNodeType" : "AUTOMATIC_PLATFORM_ALLOCATION",
-          "capabilities" : [ ],
-          "connectionName" : "Mongodb",
+          "accessNodeProcessId" : "698a9542270e32c99ed796c9",
+          "capabilities" : [ {
+            "id" : "execute_command_function",
+            "type" : 11
+          }, {
+            "id" : "batch_read_function",
+            "type" : 11
+          }, {
+            "id" : "stream_read_function",
+            "type" : 11
+          }, {
+            "id" : "batch_count_function",
+            "type" : 11
+          }, {
+            "id" : "timestamp_to_stream_offset_function",
+            "type" : 11
+          }, {
+            "id" : "write_record_function",
+            "type" : 11
+          }, {
+            "id" : "query_by_advance_filter_function",
+            "type" : 11
+          }, {
+            "id" : "create_table_v2_function",
+            "type" : 11
+          }, {
+            "id" : "drop_table_function",
+            "type" : 11
+          }, {
+            "id" : "create_index_function",
+            "type" : 11
+          }, {
+            "id" : "query_indexes_function",
+            "type" : 11
+          }, {
+            "id" : "count_by_partition_filter_function",
+            "type" : 11
+          }, {
+            "id" : "get_read_partitions_function",
+            "type" : 11
+          }, {
+            "id" : "query_field_min_max_value_function",
+            "type" : 11
+          }, {
+            "id" : "transaction_begin_function",
+            "type" : 11
+          }, {
+            "id" : "transaction_commit_function",
+            "type" : 11
+          }, {
+            "id" : "transaction_rollback_function",
+            "type" : 11
+          }, {
+            "id" : "get_table_info_function",
+            "type" : 11
+          }, {
+            "id" : "get_table_names_function",
+            "type" : 11
+          }, {
+            "id" : "error_handle_function",
+            "type" : 11
+          }, {
+            "id" : "master_slave_merge",
+            "type" : 20
+          }, {
+            "id" : "dynamic_schema",
+            "type" : 20
+          }, {
+            "alternatives" : [ "update_on_exists", "ignore_on_exists", "just_insert" ],
+            "id" : "dml_insert_policy",
+            "type" : 20
+          }, {
+            "alternatives" : [ "ignore_on_nonexists", "insert_on_nonexists", "log_on_nonexists" ],
+            "id" : "dml_update_policy",
+            "type" : 20
+          }, {
+            "id" : "api_server_supported",
+            "type" : 20
+          }, {
+            "id" : "source_support_exactly_once",
+            "type" : 20
+          } ],
+          "connectionName" : "FDM",
+          "connectionTags" : [ "schema-free", "Database", "doubleActive" ],
           "connectionType" : "source_and_target",
           "db_version" : "4.4.23",
-          "hasCreated" : false,
           "pdkHash" : "4335aaa005ec1a74a4e2166bded2962e939ad50239f48b023b884f35b54129a5",
-          "pdkType" : "pdk",
-          "position" : [ 674, 50 ]
+          "pdkType" : "pdk"
         },
         "catalog" : "data",
         "compareIgnoreCase" : false,
         "concurrentReadThreadNumber" : 0,
-        "connectionId" : "6a0c0fcfcb0360a69ea91e0c",
+        "connectionId" : "697a22b32f4926f4ef011d9d",
         "databaseType" : "MongoDB",
         "disabled" : false,
         "dmlPolicy" : {
@@ -166,22 +242,12 @@
         "elementType" : "Node",
         "enableConcurrentRead" : false,
         "existDataProcessMode" : "keepData",
-        "id" : "e7b83f2d-4cea-43fa-ba10-c823d63e2943",
+        "id" : "2e1f82ed-2bf3-489a-a2a2-f8f9e9c01b65",
         "ignoreMetrics" : false,
         "increaseReadSize" : 1,
-        "incrementExactlyOnceEnable" : false,
         "incrementExactlyOnceEnableTimeWindowDay" : 3,
         "isTransformed" : false,
-        "migrateTableSelectType" : "custom",
-        "name" : "Mongodb",
-        "noPkSyncMode" : "ADD_HASH",
-        "nodeConfig" : {
-          "enableSaveDeleteData" : false,
-          "preImage4Sink" : false,
-          "shardCollection" : false,
-          "syncIndex" : false,
-          "writeConcern" : "w1"
-        },
+        "name" : "FDM",
         "readBatchSize" : 500,
         "syncForeignKeyEnable" : true,
         "syncObjects" : [ {
@@ -192,10 +258,7 @@
           "type" : "table"
         } ],
         "type" : "database",
-        "uniqueIndexEnable" : true,
         "updateConditionFieldMap" : { },
-        "writeBatchSize" : 100,
-        "writeBatchWaitMs" : 500,
         "writeStrategy" : "updateOrInsert"
       }, {
         "alarmRules" : [ {
@@ -208,7 +271,7 @@
         "alarmSettings" : [ {
           "interval" : 300,
           "key" : "DATANODE_AVERAGE_HANDLE_CONSUME",
-          "notify" : [ "SYSTEM", "EMAIL" ],
+          "notify" : [ "SYSTEM" ],
           "open" : true,
           "sort" : 4,
           "type" : "DATANODE",
@@ -217,52 +280,174 @@
         "applyCompareRule" : false,
         "attrs" : {
           "accessNodeProcessId" : "",
-          "accessNodeType" : "AUTOMATIC_PLATFORM_ALLOCATION",
-          "capabilities" : [ ],
+          "capabilities" : [ {
+            "id" : "count_raw_command_function",
+            "type" : 11
+          }, {
+            "id" : "run_raw_command_function",
+            "type" : 11
+          }, {
+            "id" : "execute_command_function",
+            "type" : 11
+          }, {
+            "id" : "release_external_function",
+            "type" : 11
+          }, {
+            "id" : "batch_read_function",
+            "type" : 11
+          }, {
+            "id" : "stream_read_function",
+            "type" : 11
+          }, {
+            "id" : "batch_count_function",
+            "type" : 11
+          }, {
+            "id" : "timestamp_to_stream_offset_function",
+            "type" : 11
+          }, {
+            "id" : "write_record_function",
+            "type" : 11
+          }, {
+            "id" : "after_initial_sync_function",
+            "type" : 11
+          }, {
+            "id" : "query_by_filter_function",
+            "type" : 11
+          }, {
+            "id" : "query_by_advance_filter_function",
+            "type" : 11
+          }, {
+            "id" : "create_table_v2_function",
+            "type" : 11
+          }, {
+            "id" : "clear_table_function",
+            "type" : 11
+          }, {
+            "id" : "drop_table_function",
+            "type" : 11
+          }, {
+            "id" : "create_index_function",
+            "type" : 11
+          }, {
+            "id" : "delete_index_function",
+            "type" : 11
+          }, {
+            "id" : "query_indexes_function",
+            "type" : 11
+          }, {
+            "id" : "query_constraints_function",
+            "type" : 11
+          }, {
+            "id" : "create_constraint_function",
+            "type" : 11
+          }, {
+            "id" : "drop_constraint_function",
+            "type" : 11
+          }, {
+            "id" : "alter_field_attributes_function",
+            "type" : 11
+          }, {
+            "id" : "alter_field_name_function",
+            "type" : 11
+          }, {
+            "id" : "drop_field_function",
+            "type" : 11
+          }, {
+            "id" : "new_field_function",
+            "type" : 11
+          }, {
+            "id" : "count_by_partition_filter_function",
+            "type" : 11
+          }, {
+            "id" : "stream_read_multi_connection_function",
+            "type" : 11
+          }, {
+            "id" : "transaction_begin_function",
+            "type" : 11
+          }, {
+            "id" : "transaction_commit_function",
+            "type" : 11
+          }, {
+            "id" : "transaction_rollback_function",
+            "type" : 11
+          }, {
+            "id" : "query_hash_by_advance_filter_function",
+            "type" : 11
+          }, {
+            "id" : "get_stream_offset_function",
+            "type" : 11
+          }, {
+            "id" : "export_event_sql_function",
+            "type" : 11
+          }, {
+            "id" : "flush_offset_function",
+            "type" : 11
+          }, {
+            "id" : "get_table_info_function",
+            "type" : 11
+          }, {
+            "id" : "get_table_names_function",
+            "type" : 11
+          }, {
+            "id" : "error_handle_function",
+            "type" : 11
+          }, {
+            "id" : "execute_command_v2_function",
+            "type" : 11
+          }, {
+            "alternatives" : [ "update_on_exists", "ignore_on_exists", "just_insert" ],
+            "id" : "dml_insert_policy",
+            "type" : 20
+          }, {
+            "alternatives" : [ "ignore_on_nonexists", "insert_on_nonexists", "log_on_nonexists" ],
+            "id" : "dml_update_policy",
+            "type" : 20
+          }, {
+            "alternatives" : [ "ignore_on_nonexists", "log_on_nonexists" ],
+            "id" : "dml_delete_policy",
+            "type" : 20
+          }, {
+            "alternatives" : [ "ignore_all_check", "default_check" ],
+            "id" : "dml_check_policy",
+            "type" : 20
+          }, {
+            "id" : "api_server_supported",
+            "type" : 20
+          }, {
+            "id" : "source_support_exactly_once",
+            "type" : 20
+          }, {
+            "id" : "batch_read_hash_split",
+            "type" : 20
+          }, {
+            "id" : "source_support_partition",
+            "type" : 20
+          } ],
           "connectionName" : "CMS",
+          "connectionTags" : [ "Database", "ssl", "doubleActive", "disableForeignKey", "NullsLast" ],
           "connectionType" : "source_and_target",
-          "hasCreated" : false,
           "pdkHash" : "8dea069f269dd428d82e60e75d0d91b6dc61be7be26eae7bc407d7b95d3b0594",
-          "pdkType" : "pdk",
-          "position" : [ 14, 50 ]
+          "pdkType" : "pdk"
         },
         "catalog" : "data",
         "compareIgnoreCase" : false,
         "concurrentReadThreadNumber" : 0,
-        "connectionId" : "6a0c1763cb0360a69ea946aa",
+        "connectionId" : "69d4a546b6efdbdde6c70856",
         "databaseType" : "PostgreSQL",
-        "ddlConfiguration" : "FILTER",
         "disabled" : false,
         "elementType" : "Node",
         "enableConcurrentRead" : false,
         "existDataProcessMode" : "keepData",
-        "id" : "2e17f897-9531-4f90-8eea-dc41e683046a",
+        "id" : "113d99a2-b0f3-46a7-a838-f3391c0208f7",
         "ignoreMetrics" : false,
         "increaseReadSize" : 1,
         "incrementExactlyOnceEnableTimeWindowDay" : 3,
         "isTransformed" : false,
         "migrateTableSelectType" : "custom",
         "name" : "CMS",
-        "noPkSyncMode" : "ADD_HASH",
-        "noPrimaryKeyTableSelectType" : "HasKeys",
-        "nodeConfig" : {
-          "applyDefault" : false,
-          "autoIncCacheValue" : 100,
-          "autoIncJumpValue" : 1000000,
-          "batchReadThreadSize" : 4,
-          "closeNotNull" : false,
-          "createAutoInc" : false,
-          "enableFileInput" : false,
-          "hashSplit" : false,
-          "maxSplit" : 20,
-          "maximumQueueSize" : 8000,
-          "partitionRoot" : false,
-          "splitUpdatePk" : true
-        },
-        "readBatchSize" : 100,
+        "noPrimaryKeyTableSelectType" : "All",
+        "readBatchSize" : 500,
         "syncForeignKeyEnable" : true,
-        "syncSourcePartitionTableEnable" : true,
-        "tableExpression" : ".*",
         "tableNames" : [ "discharge_information" ],
         "type" : "database",
         "writeStrategy" : "updateOrInsert"
@@ -271,14 +456,13 @@
     "dataSaving" : true,
     "deduceSchemaTask" : false,
     "deduplicWriteMode" : "intelligent",
-    "deleteName" : "CMS_TO_FDM",
     "desc" : "",
     "doubleActive" : false,
-    "dynamicAdjustMemoryUsage" : false,
-    "emailReceivers" : [ ],
     "enforceShareCdc" : true,
+    "fdmMain" : true,
     "fileLog" : false,
-    "id" : "6a0fb3313718b9414d531f59",
+    "finishTime" : 1775546002958,
+    "id" : "69d4a8bdb6efdbdde6c71f7c",
     "increHysteresis" : false,
     "increOperationMode" : false,
     "increSyncConcurrency" : false,
@@ -292,7 +476,7 @@
     "isSchedule" : false,
     "isStopOnError" : true,
     "ldpType" : "fdm",
-    "name" : "CMS_TO_FDM - Demo",
+    "name" : "CMS_Clone_To_FDM_979d6f",
     "normalTask" : true,
     "oldVersionTimezone" : false,
     "planStartDateFlag" : false,
@@ -308,22 +492,13 @@
     "snapShotInterrupt" : false,
     "status" : "edit",
     "statuses" : [ ],
-    "syncPoints" : [ {
-      "connectionId" : "6a0c1763cb0360a69ea946aa",
-      "connectionName" : "CMS",
-      "isStreamOffset" : false,
-      "nodeId" : "2e17f897-9531-4f90-8eea-dc41e683046a",
-      "nodeName" : "CMS",
-      "pointType" : "current",
-      "timeZone" : "+8"
-    } ],
     "syncStatus" : "",
     "syncType" : "migrate",
     "testTask" : false,
     "testUsingPreview" : false,
     "transformDagHash" : 0,
     "transformProcess" : 0.0,
-    "type" : "initial_sync+cdc",
+    "type" : "initial_sync",
     "user_id" : "62bc5008d4958d013d97c7a6",
     "writeBatchSize" : 0,
     "writeBatchWaitMs" : 0,
@@ -336,9 +511,9 @@
     "comment" : "",
     "constraints" : [ ],
     "createSource" : "job_analyze",
-    "createTime" : 1779413809468,
+    "createTime" : 1775544509835,
     "createUser" : "admin@admin.com",
-    "databaseId" : "6a0c17640a2157a02e422129",
+    "databaseId" : "69d4a547e182044db3f88756",
     "dev_version" : 1,
     "fields" : [ {
       "autoincrement" : "NO",
@@ -348,7 +523,7 @@
       "data_type" : "character(3)",
       "default_value" : null,
       "field_name" : "hospital_code",
-      "id" : "6a0c1763cb0360a69ea946aa_discharge_information_hospital_code",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_hospital_code",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : false,
@@ -372,7 +547,7 @@
       "data_type" : "character(12)",
       "default_value" : null,
       "field_name" : "case_no",
-      "id" : "6a0c1763cb0360a69ea946aa_discharge_information_case_no",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_case_no",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : false,
@@ -396,7 +571,7 @@
       "data_type" : "character(4)",
       "default_value" : null,
       "field_name" : "specialty",
-      "id" : "6a0c1763cb0360a69ea946aa_discharge_information_specialty",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_specialty",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : false,
@@ -420,7 +595,7 @@
       "data_type" : "character varying(12)",
       "default_value" : null,
       "field_name" : "ho_id",
-      "id" : "6a0c1763cb0360a69ea946aa_discharge_information_ho_id",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_ho_id",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : true,
@@ -444,7 +619,7 @@
       "data_type" : "character varying(12)",
       "default_value" : null,
       "field_name" : "mo_in_charge_id",
-      "id" : "6a0c1763cb0360a69ea946aa_discharge_information_mo_in_charge_id",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_mo_in_charge_id",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : false,
@@ -468,7 +643,7 @@
       "data_type" : "character varying(12)",
       "default_value" : null,
       "field_name" : "create_by",
-      "id" : "6a0c1763cb0360a69ea946aa_discharge_information_create_by",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_create_by",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : false,
@@ -492,7 +667,7 @@
       "data_type" : "timestamp without time zone",
       "default_value" : null,
       "field_name" : "create_dtm",
-      "id" : "6a0c1763cb0360a69ea946aa_discharge_information_create_dtm",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_create_dtm",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : false,
@@ -516,7 +691,7 @@
       "data_type" : "character varying(12)",
       "default_value" : null,
       "field_name" : "update_by",
-      "id" : "6a0c1763cb0360a69ea946aa_discharge_information_update_by",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_update_by",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : true,
@@ -540,7 +715,7 @@
       "data_type" : "timestamp without time zone",
       "default_value" : null,
       "field_name" : "update_dtm",
-      "id" : "6a0c1763cb0360a69ea946aa_discharge_information_update_dtm",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_update_dtm",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : true,
@@ -564,7 +739,7 @@
       "data_type" : "character varying(12)",
       "default_value" : null,
       "field_name" : "specialist_ic",
-      "id" : "6a0c1763cb0360a69ea946aa_discharge_information_specialist_ic",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_specialist_ic",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : false,
@@ -588,7 +763,7 @@
       "data_type" : "integer",
       "default_value" : null,
       "field_name" : "admit_mode",
-      "id" : "6a0c1763cb0360a69ea946aa_discharge_information_admit_mode",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_admit_mode",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : true,
@@ -612,7 +787,7 @@
       "data_type" : "character(5)",
       "default_value" : null,
       "field_name" : "admit_team",
-      "id" : "6a0c1763cb0360a69ea946aa_discharge_information_admit_team",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_admit_team",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : true,
@@ -636,7 +811,7 @@
       "data_type" : "character varying(12)",
       "default_value" : null,
       "field_name" : "admit_physician",
-      "id" : "6a0c1763cb0360a69ea946aa_discharge_information_admit_physician",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_admit_physician",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : true,
@@ -660,7 +835,7 @@
       "data_type" : "character varying(12)",
       "default_value" : null,
       "field_name" : "admit_doctor",
-      "id" : "6a0c1763cb0360a69ea946aa_discharge_information_admit_doctor",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_admit_doctor",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : true,
@@ -684,7 +859,7 @@
       "data_type" : "timestamp without time zone",
       "default_value" : null,
       "field_name" : "expected_discharge_date",
-      "id" : "6a0c1763cb0360a69ea946aa_discharge_information_expected_discharge_date",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_expected_discharge_date",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : true,
@@ -708,7 +883,7 @@
       "data_type" : "character(1)",
       "default_value" : null,
       "field_name" : "discharge_mode",
-      "id" : "6a0c1763cb0360a69ea946aa_discharge_information_discharge_mode",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_discharge_mode",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : true,
@@ -732,7 +907,7 @@
       "data_type" : "character(5)",
       "default_value" : null,
       "field_name" : "discharge_destination",
-      "id" : "6a0c1763cb0360a69ea946aa_discharge_information_discharge_destination",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_discharge_destination",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : true,
@@ -756,7 +931,7 @@
       "data_type" : "character(5)",
       "default_value" : null,
       "field_name" : "discharge_team",
-      "id" : "6a0c1763cb0360a69ea946aa_discharge_information_discharge_team",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_discharge_team",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : true,
@@ -780,7 +955,7 @@
       "data_type" : "character varying(12)",
       "default_value" : null,
       "field_name" : "discharge_physician",
-      "id" : "6a0c1763cb0360a69ea946aa_discharge_information_discharge_physician",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_discharge_physician",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : true,
@@ -804,7 +979,7 @@
       "data_type" : "bytea",
       "default_value" : null,
       "field_name" : "timestamp",
-      "id" : "6a0c1763cb0360a69ea946aa_discharge_information_timestamp",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_timestamp",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : true,
@@ -828,7 +1003,7 @@
       "data_type" : "timestamp without time zone",
       "default_value" : null,
       "field_name" : "sick_leave_from_dtm",
-      "id" : "6a0c1763cb0360a69ea946aa_discharge_information_sick_leave_from_dtm",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_sick_leave_from_dtm",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : true,
@@ -852,7 +1027,7 @@
       "data_type" : "timestamp without time zone",
       "default_value" : null,
       "field_name" : "sick_leave_to_dtm",
-      "id" : "6a0c1763cb0360a69ea946aa_discharge_information_sick_leave_to_dtm",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_sick_leave_to_dtm",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : true,
@@ -874,7 +1049,7 @@
     "hasTransformEx" : false,
     "hasUnionIndex" : true,
     "hasUpdateField" : false,
-    "id" : "6a0fb331fbf2cde92004b1e7",
+    "id" : "69d4a8bde182044db300db11",
     "indices" : [ {
       "columns" : [ {
         "columnIsAsc" : true,
@@ -913,24 +1088,24 @@
     "is_deleted" : false,
     "meta_type" : "processor_node",
     "name" : "FDM_CMS_discharge_information",
-    "nodeId" : "8330d523-5d68-4694-b5e8-a6bed2458f41",
+    "nodeId" : "63ad48af-5e96-411f-a3d7-10aa6b6cff50",
     "original_name" : "FDM_CMS_discharge_information",
     "partitionSet" : [ ],
-    "qualified_name" : "PN_8330d523-5d68-4694-b5e8-a6bed2458f41_FDM_CMS_discharge_information",
+    "qualified_name" : "PN_63ad48af-5e96-411f-a3d7-10aa6b6cff50_FDM_CMS_discharge_information",
     "source" : {
-      "_id" : "6a0c1763cb0360a69ea946aa",
+      "_id" : "69d4a546b6efdbdde6c70856",
       "agentTags" : [ ],
       "connection_type" : "source_and_target",
       "createUser" : "admin@admin.com",
       "database_type" : "PostgreSQL",
       "everLoadSchema" : true,
-      "id" : "6a0c1763cb0360a69ea946aa",
+      "id" : "69d4a546b6efdbdde6c70856",
       "kafkaAcks" : "-1",
       "kafkaCompressionType" : "",
       "kafkaIgnoreInvalidRecord" : false,
       "kafkaIgnorePushError" : false,
       "lastUpdBy" : "62bc5008d4958d013d97c7a6",
-      "loadCount" : 2,
+      "loadCount" : 1,
       "loadFieldErrMsg" : "",
       "loadFieldsStatus" : "finished",
       "loadSchemaField" : true,
@@ -938,17 +1113,17 @@
       "plain_password" : "",
       "project" : "",
       "retry" : 0,
-      "schemaVersion" : "816eee00-754e-47db-bc3c-5458fe2d2adc",
+      "schemaVersion" : "416f2af0-a6c2-43fe-bfc6-a7d966d036db",
       "status" : "ready",
       "submit" : true,
-      "tableCount" : 2,
-      "testTime" : 1779300001263,
+      "tableCount" : 1,
+      "testTime" : 1775543713516,
       "transformed" : true,
       "user_id" : "62bc5008d4958d013d97c7a6"
     },
     "sourceType" : "VIRTUAL",
-    "taskId" : "6a0fb3313718b9414d531f59",
-    "transformUuid" : "1779413851249",
+    "taskId" : "69d4a8bdb6efdbdde6c71f7c",
+    "transformUuid" : "1775544509724",
     "user_id" : "62bc5008d4958d013d97c7a6",
     "username" : "admin@admin.com"
   }
@@ -958,36 +1133,12 @@
     "ancestorsName" : "discharge_information",
     "comment" : "",
     "constraints" : [ ],
-    "createSource" : "auto",
-    "createTime" : 1779413809468,
+    "createSource" : "job_analyze",
+    "createTime" : 1775544509837,
     "createUser" : "admin@admin.com",
-    "databaseId" : "6a0c0fd10a2157a02e3b9d9e",
+    "databaseId" : "697a4ea7bf1a74c7e71638f6",
     "dev_version" : 1,
     "fields" : [ {
-      "autoincrement" : "NO",
-      "columnPosition" : 0,
-      "columnSize" : 100,
-      "createSource" : "job_analyze",
-      "dataTypeTemp" : "OBJECT_ID",
-      "data_type" : "OBJECT_ID",
-      "default_value" : null,
-      "field_name" : "_id",
-      "id" : "6a0c0fcfcb0360a69ea91e0c_FDM_CMS_discharge_information__id",
-      "is_auto_allowed" : true,
-      "is_deleted" : false,
-      "is_nullable" : true,
-      "oriPrecision" : 100,
-      "original_field_name" : "_id",
-      "previousDataType" : "OBJECT_ID",
-      "previousFieldName" : "_id",
-      "primaryKey" : false,
-      "source" : "job_analyze",
-      "sourceDbType" : "MongoDB",
-      "table_name" : "FDM_CMS_discharge_information",
-      "tapType" : "{\"bytes\":24,\"type\":10}",
-      "unique" : false,
-      "useDefaultValue" : true
-    }, {
       "autoincrement" : "NO",
       "columnPosition" : 1,
       "createSource" : "auto",
@@ -995,7 +1146,7 @@
       "data_type" : "STRING(3)",
       "default_value" : null,
       "field_name" : "hospital_code",
-      "id" : "6a0c0fcfcb0360a69ea91e0c_FDM_CMS_discharge_information_hospital_code",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_hospital_code",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : false,
@@ -1019,7 +1170,7 @@
       "data_type" : "STRING(12)",
       "default_value" : null,
       "field_name" : "case_no",
-      "id" : "6a0c0fcfcb0360a69ea91e0c_FDM_CMS_discharge_information_case_no",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_case_no",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : false,
@@ -1043,7 +1194,7 @@
       "data_type" : "STRING(4)",
       "default_value" : null,
       "field_name" : "specialty",
-      "id" : "6a0c0fcfcb0360a69ea91e0c_FDM_CMS_discharge_information_specialty",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_specialty",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : false,
@@ -1067,7 +1218,7 @@
       "data_type" : "STRING(12)",
       "default_value" : null,
       "field_name" : "ho_id",
-      "id" : "6a0c0fcfcb0360a69ea91e0c_FDM_CMS_discharge_information_ho_id",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_ho_id",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : true,
@@ -1091,7 +1242,7 @@
       "data_type" : "STRING(12)",
       "default_value" : null,
       "field_name" : "mo_in_charge_id",
-      "id" : "6a0c0fcfcb0360a69ea91e0c_FDM_CMS_discharge_information_mo_in_charge_id",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_mo_in_charge_id",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : false,
@@ -1115,7 +1266,7 @@
       "data_type" : "STRING(12)",
       "default_value" : null,
       "field_name" : "create_by",
-      "id" : "6a0c0fcfcb0360a69ea91e0c_FDM_CMS_discharge_information_create_by",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_create_by",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : false,
@@ -1139,7 +1290,7 @@
       "data_type" : "DATE_TIME",
       "default_value" : null,
       "field_name" : "create_dtm",
-      "id" : "6a0c0fcfcb0360a69ea91e0c_FDM_CMS_discharge_information_create_dtm",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_create_dtm",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : false,
@@ -1163,7 +1314,7 @@
       "data_type" : "STRING(12)",
       "default_value" : null,
       "field_name" : "update_by",
-      "id" : "6a0c0fcfcb0360a69ea91e0c_FDM_CMS_discharge_information_update_by",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_update_by",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : true,
@@ -1187,7 +1338,7 @@
       "data_type" : "DATE_TIME",
       "default_value" : null,
       "field_name" : "update_dtm",
-      "id" : "6a0c0fcfcb0360a69ea91e0c_FDM_CMS_discharge_information_update_dtm",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_update_dtm",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : true,
@@ -1211,7 +1362,7 @@
       "data_type" : "STRING(12)",
       "default_value" : null,
       "field_name" : "specialist_ic",
-      "id" : "6a0c0fcfcb0360a69ea91e0c_FDM_CMS_discharge_information_specialist_ic",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_specialist_ic",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : false,
@@ -1235,7 +1386,7 @@
       "data_type" : "INT32",
       "default_value" : null,
       "field_name" : "admit_mode",
-      "id" : "6a0c0fcfcb0360a69ea91e0c_FDM_CMS_discharge_information_admit_mode",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_admit_mode",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : true,
@@ -1259,7 +1410,7 @@
       "data_type" : "STRING(5)",
       "default_value" : null,
       "field_name" : "admit_team",
-      "id" : "6a0c0fcfcb0360a69ea91e0c_FDM_CMS_discharge_information_admit_team",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_admit_team",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : true,
@@ -1283,7 +1434,7 @@
       "data_type" : "STRING(12)",
       "default_value" : null,
       "field_name" : "admit_physician",
-      "id" : "6a0c0fcfcb0360a69ea91e0c_FDM_CMS_discharge_information_admit_physician",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_admit_physician",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : true,
@@ -1307,7 +1458,7 @@
       "data_type" : "STRING(12)",
       "default_value" : null,
       "field_name" : "admit_doctor",
-      "id" : "6a0c0fcfcb0360a69ea91e0c_FDM_CMS_discharge_information_admit_doctor",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_admit_doctor",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : true,
@@ -1331,7 +1482,7 @@
       "data_type" : "DATE_TIME",
       "default_value" : null,
       "field_name" : "expected_discharge_date",
-      "id" : "6a0c0fcfcb0360a69ea91e0c_FDM_CMS_discharge_information_expected_discharge_date",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_expected_discharge_date",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : true,
@@ -1355,7 +1506,7 @@
       "data_type" : "STRING(1)",
       "default_value" : null,
       "field_name" : "discharge_mode",
-      "id" : "6a0c0fcfcb0360a69ea91e0c_FDM_CMS_discharge_information_discharge_mode",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_discharge_mode",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : true,
@@ -1379,7 +1530,7 @@
       "data_type" : "STRING(5)",
       "default_value" : null,
       "field_name" : "discharge_destination",
-      "id" : "6a0c0fcfcb0360a69ea91e0c_FDM_CMS_discharge_information_discharge_destination",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_discharge_destination",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : true,
@@ -1403,7 +1554,7 @@
       "data_type" : "STRING(5)",
       "default_value" : null,
       "field_name" : "discharge_team",
-      "id" : "6a0c0fcfcb0360a69ea91e0c_FDM_CMS_discharge_information_discharge_team",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_discharge_team",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : true,
@@ -1427,7 +1578,7 @@
       "data_type" : "STRING(12)",
       "default_value" : null,
       "field_name" : "discharge_physician",
-      "id" : "6a0c0fcfcb0360a69ea91e0c_FDM_CMS_discharge_information_discharge_physician",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_discharge_physician",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : true,
@@ -1451,7 +1602,7 @@
       "data_type" : "BINARY",
       "default_value" : null,
       "field_name" : "timestamp",
-      "id" : "6a0c0fcfcb0360a69ea91e0c_FDM_CMS_discharge_information_timestamp",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_timestamp",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : true,
@@ -1475,7 +1626,7 @@
       "data_type" : "DATE_TIME",
       "default_value" : null,
       "field_name" : "sick_leave_from_dtm",
-      "id" : "6a0c0fcfcb0360a69ea91e0c_FDM_CMS_discharge_information_sick_leave_from_dtm",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_sick_leave_from_dtm",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : true,
@@ -1499,7 +1650,7 @@
       "data_type" : "DATE_TIME",
       "default_value" : null,
       "field_name" : "sick_leave_to_dtm",
-      "id" : "6a0c0fcfcb0360a69ea91e0c_FDM_CMS_discharge_information_sick_leave_to_dtm",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_sick_leave_to_dtm",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : true,
@@ -1513,6 +1664,30 @@
       "source" : "auto",
       "sourceDbType" : "MongoDB",
       "tapType" : "{\"defaultFraction\":3,\"fraction\":3,\"max\":\"9999-12-31T23:59:59.999Z\",\"min\":\"1000-01-01T00:00:00.001Z\",\"type\":1}",
+      "unique" : false,
+      "useDefaultValue" : true
+    }, {
+      "autoincrement" : "NO",
+      "columnPosition" : 0,
+      "columnSize" : 100,
+      "createSource" : "job_analyze",
+      "dataTypeTemp" : "OBJECT_ID",
+      "data_type" : "OBJECT_ID",
+      "default_value" : null,
+      "field_name" : "_id",
+      "id" : "63ad48af-5e96-411f-a3d7-10aa6b6cff50_FDM_CMS_discharge_information__id",
+      "is_auto_allowed" : true,
+      "is_deleted" : false,
+      "is_nullable" : true,
+      "oriPrecision" : 100,
+      "original_field_name" : "_id",
+      "previousDataType" : "OBJECT_ID",
+      "previousFieldName" : "_id",
+      "primaryKey" : false,
+      "source" : "job_analyze",
+      "sourceDbType" : "MongoDB",
+      "table_name" : "FDM_CMS_discharge_information",
+      "tapType" : "{\"bytes\":24,\"type\":10}",
       "unique" : false,
       "useDefaultValue" : true
     } ],
@@ -1604,7 +1779,7 @@
     "hasTransformEx" : true,
     "hasUnionIndex" : true,
     "hasUpdateField" : false,
-    "id" : "6a0fb331fbf2cde92004b1e8",
+    "id" : "69d4a8bde182044db300db16",
     "indices" : [ {
       "columns" : [ {
         "columnIsAsc" : true,
@@ -1643,12 +1818,12 @@
     "is_deleted" : false,
     "meta_type" : "table",
     "name" : "FDM_CMS_discharge_information",
-    "nodeId" : "e7b83f2d-4cea-43fa-ba10-c823d63e2943",
+    "nodeId" : "2e1f82ed-2bf3-489a-a2a2-f8f9e9c01b65",
     "original_name" : "FDM_CMS_discharge_information",
     "partitionSet" : [ ],
-    "qualified_name" : "T_mongodb_io_tapdata_1_0-SNAPSHOT_FDM_CMS_discharge_information_6a0c0fcfcb0360a69ea91e0c_6a0fb3313718b9414d531f59",
+    "qualified_name" : "T_mongodb_io_tapdata_1_0-SNAPSHOT_FDM_CMS_discharge_information_697a22b32f4926f4ef011d9d_69d4a8bdb6efdbdde6c71f7c",
     "source" : {
-      "_id" : "6a0c0fcfcb0360a69ea91e0c",
+      "_id" : "697a22b32f4926f4ef011d9d",
       "agentTags" : [ ],
       "connection_type" : "source_and_target",
       "createUser" : "admin@admin.com",
@@ -1656,39 +1831,31 @@
       "database_uri" : "mongodb://null/null",
       "db_version" : "4.4.23",
       "everLoadSchema" : true,
-      "id" : "6a0c0fcfcb0360a69ea91e0c",
+      "id" : "697a22b32f4926f4ef011d9d",
       "kafkaAcks" : "-1",
       "kafkaCompressionType" : "",
       "kafkaIgnoreInvalidRecord" : false,
       "kafkaIgnorePushError" : false,
       "lastUpdBy" : "62bc5008d4958d013d97c7a6",
-      "loadCount" : 16,
-      "loadFieldErrMsg" : "",
-      "loadFieldsStatus" : "finished",
+      "loadCount" : 0,
+      "loadFieldErrMsg" : "java.lang.RuntimeException: Load schema fields error, connection name: FDM, message: Unknown PDK exception occur, com.mongodb.MongoSecurityException: Exception authenticating MongoCredential{mechanism=SCRAM-SHA-1, userName='root', source='test', password=<hidden>, mechanismProperties=<hidden>}\n  java.lang.RuntimeException: Load schema fields error, connection name: FDM, message: Unknown PDK exception occur, com.mongodb.MongoSecurityException: Exception authenticating MongoCredential{mechanism=SCRAM-SHA-1, userName='root', source='test', password=<hidden>, mechanismProperties=<hidden>}\n\tat io.tapdata.Runnable.LoadSchemaRunner.run(LoadSchemaRunner.java:191)\n\tat io.tapdata.websocket.handler.TestConnectionHandler.testPdkConnection(TestConnectionHandler.java:264)\n\tat io.tapdata.websocket.handler.TestConnectionHandler.handleSync(TestConnectionHandler.java:156)\n\tat io.tapdata.websocket.handler.TestConnectionHandler.lambda$handle$2(TestConnectionHandler.java:127)\n\tat io.tapdata.aspect.supervisor.AspectRunnableUtil.lambda$aspectRunnable$1(AspectRunnableUtil.java:11)\n\tat java.base/java.lang.Thread.run(Thread.java:842)\nCaused by: com.mongodb.MongoSecurityException: Exception authenticating MongoCredential{mechanism=SCRAM-SHA-1, userName='root', source='test', password=<hidden>, mechanismProperties=<hidden>}\n\tat io.tapdata.pdk.core.monitor.PDKInvocationMonitor.invokePDKMethodPrivate(PDKInvocationMonitor.java:188)\n\tat io.tapdata.pdk.core.monitor.PDKInvocationMonitor.lambda$invokePDKMethod$5(PDKInvocationMonitor.java:125)\n\tat io.tapdata.pdk.core.api.Node.applyClassLoaderContext(Node.java:27)\n\tat io.tapdata.pdk.core.monitor.PDKInvocationMonitor.invokePDKMethod(PDKInvocationMonitor.java:125)\n\tat io.tapdata.pdk.core.monitor.PDKInvocationMonitor.invokePDKMethod(PDKInvocationMonitor.java:109)\n\tat io.tapdata.pdk.core.monitor.PDKInvocationMonitor.invoke(PDKInvocationMonitor.java:83)\n\tat io.tapdata.Runnable.LoadSchemaRunner.run(LoadSchemaRunner.java:160)\n\t... 5 more\nCaused by: com.mongodb.MongoSecurityException: Exception authenticating MongoCredential{mechanism=SCRAM-SHA-1, userName='root', source='test', password=<hidden>, mechanismProperties=<hidden>}\n\tat com.mongodb.internal.connection.SaslAuthenticator.wrapException(SaslAuthenticator.java:270)\n\tat com.mongodb.internal.connection.SaslAuthenticator.getNextSaslResponse(SaslAuthenticator.java:133)\n\tat com.mongodb.internal.connection.SaslAuthenticator.lambda$authenticate$0(SaslAuthenticator.java:63)\n\tat com.mongodb.internal.connection.SaslAuthenticator.doAsSubject(SaslAuthenticator.java:277)\n\tat com.mongodb.internal.connection.SaslAuthenticator.authenticate(SaslAuthenticator.java:59)\n\tat com.mongodb.internal.connection.DefaultAuthenticator.authenticate(DefaultAuthenticator.java:57)\n\tat com.mongodb.internal.connection.InternalStreamConnectionInitializer.authenticate(InternalStreamConnectionInitializer.java:205)\n\tat com.mongodb.internal.connection.InternalStreamConnectionInitializer.finishHandshake(InternalStreamConnectionInitializer.java:85)\n\tat com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:209)\n\tat com.mongodb.internal.connection.UsageTrackingInternalConnection.open(UsageTrackingInternalConnection.java:55)\n\tat com.mongodb.internal.connection.DefaultConnectionPool$PooledConnection.open(DefaultConnectionPool.java:534)\n\tat com.mongodb.internal.connection.DefaultConnectionPool$OpenConcurrencyLimiter.openWithConcurrencyLimit(DefaultConnectionPool.java:895)\n\tat com.mongodb.internal.connection.DefaultConnectionPool$OpenConcurrencyLimiter.openOrGetAvailable(DefaultConnectionPool.java:836)\n\tat com.mongodb.internal.connection.DefaultConnectionPool.get(DefaultConnectionPool.java:177)\n\tat com.mongodb.internal.connection.DefaultConnectionPool.get(DefaultConnectionPool.java:166)\n\tat com.mongodb.internal.connection.DefaultServer.getConnection(DefaultServer.java:97)\n\tat com.mongodb.internal.binding.ClusterBinding$ClusterBindingConnectionSource.getConnection(ClusterBinding.java:173)\n\tat com.mongodb.client.internal.ClientSessionBinding$SessionBindingConnectionSource.getConnection(ClientSessionBinding.java:193)\n\tat com.mongodb.internal.operation.OperationHelper.withSuppliedResource(OperationHelper.java:375)\n\tat com.mongodb.internal.operation.OperationHelper.lambda$withSourceAndConnection$1(OperationHelper.java:357)\n\tat com.mongodb.internal.operation.OperationHelper.withSuppliedResource(OperationHelper.java:383)\n\tat com.mongodb.internal.operation.OperationHelper.withSourceAndConnection(OperationHelper.java:356)\n\tat com.mongodb.internal.operation.CommandOperationHelper.lambda$executeRetryableRead$5(CommandOperationHelper.java:218)\n\tat com.mongodb.internal.async.function.RetryingSyncSupplier.get(RetryingSyncSupplier.java:67)\n\tat com.mongodb.internal.operation.CommandOperationHelper.executeRetryableRead(CommandOperationHelper.java:223)\n\tat com.mongodb.internal.operation.CommandOperationHelper.executeRetryableRead(CommandOperationHelper.java:204)\n\tat com.mongodb.internal.operation.CommandReadOperation.execute(CommandReadOperation.java:48)\n\tat com.mongodb.client.internal.MongoClientDelegate$DelegateOperationExecutor.execute(MongoClientDelegate.java:185)\n\tat com.mongodb.client.internal.MongoDatabaseImpl.executeCommand(MongoDatabaseImpl.java:196)\n\tat com.mongodb.client.internal.MongoDatabaseImpl.runCommand(MongoDatabaseImpl.java:165)\n\tat com.mongodb.client.internal.MongoDatabaseImpl.runCommand(MongoDatabaseImpl.java:160)\n\tat com.mongodb.client.internal.MongoDatabaseImpl.runCommand(MongoDatabaseImpl.java:150)\n\tat io.tapdata.mongodb.MongodbUtil.getVersion(MongodbUtil.java:61)\n\tat io.tapdata.mongodb.MongodbConnector.onStart(MongodbConnector.java:1338)\n\tat io.tapdata.base.ConnectorBase.init(ConnectorBase.java:285)\n\tat io.tapdata.pdk.core.api.ConnectionNode.connectorInit(ConnectionNode.java:53)\n\tat io.tapdata.pdk.core.monitor.PDKInvocationMonitor.invokePDKMethodPrivate(PDKInvocationMonitor.java:165)\n\t... 11 more\nCaused by: com.mongodb.MongoCommandException: Command failed with error 18 (AuthenticationFailed): 'Authentication failed.' on server 192.168.1.184:37017. The full response is {\"operationTime\": {\"$timestamp\": {\"t\": 1775239203, \"i\": 244}}, \"ok\": 0.0, \"errmsg\": \"Authentication failed.\", \"code\": 18, \"codeName\": \"AuthenticationFailed\", \"$clusterTime\": {\"clusterTime\": {\"$timestamp\": {\"t\": 1775239203, \"i\": 244}}, \"signature\": {\"hash\": {\"$binary\": {\"base64\": \"uY5KyzMgxfFYKCyQO9O2gmto6/U=\", \"subType\": \"00\"}}, \"keyId\": 7600215887521513477}}}\n\tat com.mongodb.internal.connection.ProtocolHelper.getCommandFailureException(ProtocolHelper.java:205)\n\tat com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:443)\n\tat com.mongodb.internal.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:365)\n\tat com.mongodb.internal.connection.CommandHelper.sendAndReceive(CommandHelper.java:102)\n\tat com.mongodb.internal.connection.CommandHelper.executeCommand(CommandHelper.java:49)\n\tat com.mongodb.internal.connection.SaslAuthenticator.sendSaslStart(SaslAuthenticator.java:224)\n\tat com.mongodb.internal.connection.SaslAuthenticator.getNextSaslResponse(SaslAuthenticator.java:131)\n\t... 46 more\n",
+      "loadFieldsStatus" : "error",
       "loadSchemaField" : true,
-      "name" : "Mongodb",
+      "name" : "FDM",
       "plain_password" : "",
       "project" : "",
       "retry" : 0,
-      "schemaVersion" : "d5a4ddbf-c2c8-40b9-8cd7-4e7776718524",
-      "status" : "ready",
+      "schemaVersion" : "81a1617f-5611-4ba4-8753-6a48eddb14e4",
+      "status" : "invalid",
       "submit" : true,
-      "tableCount" : 16,
-      "testTime" : 1779386401383,
+      "tableCount" : 0,
+      "testTime" : 1775239202913,
       "transformed" : true,
       "user_id" : "62bc5008d4958d013d97c7a6"
     },
     "sourceType" : "VIRTUAL",
-    "tableAttr" : {
-      "avgObjSize" : 434,
-      "capped" : false,
-      "ns" : "drill_test.FDM_CMS_discharge_information",
-      "shard" : { },
-      "size" : 44005712,
-      "storageSize" : 5689344
-    },
-    "taskId" : "6a0fb3313718b9414d531f59",
-    "transformUuid" : "1779413851249",
+    "taskId" : "69d4a8bdb6efdbdde6c71f7c",
+    "transformUuid" : "1775544509724",
     "user_id" : "62bc5008d4958d013d97c7a6",
     "username" : "admin@admin.com"
   }
@@ -1698,10 +1865,10 @@
     "ancestorsName" : "discharge_information",
     "comment" : "",
     "constraints" : [ ],
-    "createSource" : "auto",
-    "createTime" : 1779413809467,
+    "createSource" : "job_analyze",
+    "createTime" : 1775544509834,
     "createUser" : "admin@admin.com",
-    "databaseId" : "6a0c17640a2157a02e422129",
+    "databaseId" : "69d4a547e182044db3f88756",
     "dev_version" : 1,
     "fields" : [ {
       "autoincrement" : "NO",
@@ -1711,7 +1878,7 @@
       "data_type" : "character(3)",
       "default_value" : null,
       "field_name" : "hospital_code",
-      "id" : "6a0c1763cb0360a69ea946aa_discharge_information_hospital_code",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_hospital_code",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : false,
@@ -1735,7 +1902,7 @@
       "data_type" : "character(12)",
       "default_value" : null,
       "field_name" : "case_no",
-      "id" : "6a0c1763cb0360a69ea946aa_discharge_information_case_no",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_case_no",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : false,
@@ -1759,7 +1926,7 @@
       "data_type" : "character(4)",
       "default_value" : null,
       "field_name" : "specialty",
-      "id" : "6a0c1763cb0360a69ea946aa_discharge_information_specialty",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_specialty",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : false,
@@ -1783,7 +1950,7 @@
       "data_type" : "character varying(12)",
       "default_value" : null,
       "field_name" : "ho_id",
-      "id" : "6a0c1763cb0360a69ea946aa_discharge_information_ho_id",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_ho_id",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : true,
@@ -1807,7 +1974,7 @@
       "data_type" : "character varying(12)",
       "default_value" : null,
       "field_name" : "mo_in_charge_id",
-      "id" : "6a0c1763cb0360a69ea946aa_discharge_information_mo_in_charge_id",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_mo_in_charge_id",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : false,
@@ -1831,7 +1998,7 @@
       "data_type" : "character varying(12)",
       "default_value" : null,
       "field_name" : "create_by",
-      "id" : "6a0c1763cb0360a69ea946aa_discharge_information_create_by",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_create_by",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : false,
@@ -1855,7 +2022,7 @@
       "data_type" : "timestamp without time zone",
       "default_value" : null,
       "field_name" : "create_dtm",
-      "id" : "6a0c1763cb0360a69ea946aa_discharge_information_create_dtm",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_create_dtm",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : false,
@@ -1879,7 +2046,7 @@
       "data_type" : "character varying(12)",
       "default_value" : null,
       "field_name" : "update_by",
-      "id" : "6a0c1763cb0360a69ea946aa_discharge_information_update_by",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_update_by",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : true,
@@ -1903,7 +2070,7 @@
       "data_type" : "timestamp without time zone",
       "default_value" : null,
       "field_name" : "update_dtm",
-      "id" : "6a0c1763cb0360a69ea946aa_discharge_information_update_dtm",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_update_dtm",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : true,
@@ -1927,7 +2094,7 @@
       "data_type" : "character varying(12)",
       "default_value" : null,
       "field_name" : "specialist_ic",
-      "id" : "6a0c1763cb0360a69ea946aa_discharge_information_specialist_ic",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_specialist_ic",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : false,
@@ -1951,7 +2118,7 @@
       "data_type" : "integer",
       "default_value" : null,
       "field_name" : "admit_mode",
-      "id" : "6a0c1763cb0360a69ea946aa_discharge_information_admit_mode",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_admit_mode",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : true,
@@ -1975,7 +2142,7 @@
       "data_type" : "character(5)",
       "default_value" : null,
       "field_name" : "admit_team",
-      "id" : "6a0c1763cb0360a69ea946aa_discharge_information_admit_team",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_admit_team",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : true,
@@ -1999,7 +2166,7 @@
       "data_type" : "character varying(12)",
       "default_value" : null,
       "field_name" : "admit_physician",
-      "id" : "6a0c1763cb0360a69ea946aa_discharge_information_admit_physician",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_admit_physician",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : true,
@@ -2023,7 +2190,7 @@
       "data_type" : "character varying(12)",
       "default_value" : null,
       "field_name" : "admit_doctor",
-      "id" : "6a0c1763cb0360a69ea946aa_discharge_information_admit_doctor",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_admit_doctor",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : true,
@@ -2047,7 +2214,7 @@
       "data_type" : "timestamp without time zone",
       "default_value" : null,
       "field_name" : "expected_discharge_date",
-      "id" : "6a0c1763cb0360a69ea946aa_discharge_information_expected_discharge_date",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_expected_discharge_date",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : true,
@@ -2071,7 +2238,7 @@
       "data_type" : "character(1)",
       "default_value" : null,
       "field_name" : "discharge_mode",
-      "id" : "6a0c1763cb0360a69ea946aa_discharge_information_discharge_mode",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_discharge_mode",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : true,
@@ -2095,7 +2262,7 @@
       "data_type" : "character(5)",
       "default_value" : null,
       "field_name" : "discharge_destination",
-      "id" : "6a0c1763cb0360a69ea946aa_discharge_information_discharge_destination",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_discharge_destination",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : true,
@@ -2119,7 +2286,7 @@
       "data_type" : "character(5)",
       "default_value" : null,
       "field_name" : "discharge_team",
-      "id" : "6a0c1763cb0360a69ea946aa_discharge_information_discharge_team",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_discharge_team",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : true,
@@ -2143,7 +2310,7 @@
       "data_type" : "character varying(12)",
       "default_value" : null,
       "field_name" : "discharge_physician",
-      "id" : "6a0c1763cb0360a69ea946aa_discharge_information_discharge_physician",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_discharge_physician",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : true,
@@ -2167,7 +2334,7 @@
       "data_type" : "bytea",
       "default_value" : null,
       "field_name" : "timestamp",
-      "id" : "6a0c1763cb0360a69ea946aa_discharge_information_timestamp",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_timestamp",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : true,
@@ -2191,7 +2358,7 @@
       "data_type" : "timestamp without time zone",
       "default_value" : null,
       "field_name" : "sick_leave_from_dtm",
-      "id" : "6a0c1763cb0360a69ea946aa_discharge_information_sick_leave_from_dtm",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_sick_leave_from_dtm",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : true,
@@ -2215,7 +2382,7 @@
       "data_type" : "timestamp without time zone",
       "default_value" : null,
       "field_name" : "sick_leave_to_dtm",
-      "id" : "6a0c1763cb0360a69ea946aa_discharge_information_sick_leave_to_dtm",
+      "id" : "69d4a546b6efdbdde6c70856_discharge_information_sick_leave_to_dtm",
       "is_auto_allowed" : true,
       "is_deleted" : false,
       "is_nullable" : true,
@@ -2237,7 +2404,7 @@
     "hasTransformEx" : false,
     "hasUnionIndex" : true,
     "hasUpdateField" : false,
-    "id" : "6a0fb331fbf2cde92004b1e6",
+    "id" : "69d4a8bde182044db300db0a",
     "indices" : [ {
       "columns" : [ {
         "columnIsAsc" : true,
@@ -2276,24 +2443,24 @@
     "is_deleted" : false,
     "meta_type" : "table",
     "name" : "discharge_information",
-    "nodeId" : "2e17f897-9531-4f90-8eea-dc41e683046a",
+    "nodeId" : "113d99a2-b0f3-46a7-a838-f3391c0208f7",
     "original_name" : "discharge_information",
     "partitionSet" : [ ],
-    "qualified_name" : "T_postgres_io_tapdata_1_0-SNAPSHOT_discharge_information_6a0c1763cb0360a69ea946aa_6a0fb3313718b9414d531f59",
+    "qualified_name" : "T_postgres_io_tapdata_1_0-SNAPSHOT_discharge_information_69d4a546b6efdbdde6c70856_69d4a8bdb6efdbdde6c71f7c",
     "source" : {
-      "_id" : "6a0c1763cb0360a69ea946aa",
+      "_id" : "69d4a546b6efdbdde6c70856",
       "agentTags" : [ ],
       "connection_type" : "source_and_target",
       "createUser" : "admin@admin.com",
       "database_type" : "PostgreSQL",
       "everLoadSchema" : true,
-      "id" : "6a0c1763cb0360a69ea946aa",
+      "id" : "69d4a546b6efdbdde6c70856",
       "kafkaAcks" : "-1",
       "kafkaCompressionType" : "",
       "kafkaIgnoreInvalidRecord" : false,
       "kafkaIgnorePushError" : false,
       "lastUpdBy" : "62bc5008d4958d013d97c7a6",
-      "loadCount" : 2,
+      "loadCount" : 1,
       "loadFieldErrMsg" : "",
       "loadFieldsStatus" : "finished",
       "loadSchemaField" : true,
@@ -2301,17 +2468,17 @@
       "plain_password" : "",
       "project" : "",
       "retry" : 0,
-      "schemaVersion" : "816eee00-754e-47db-bc3c-5458fe2d2adc",
+      "schemaVersion" : "416f2af0-a6c2-43fe-bfc6-a7d966d036db",
       "status" : "ready",
       "submit" : true,
-      "tableCount" : 2,
-      "testTime" : 1779300001263,
+      "tableCount" : 1,
+      "testTime" : 1775543713516,
       "transformed" : true,
       "user_id" : "62bc5008d4958d013d97c7a6"
     },
     "sourceType" : "VIRTUAL",
-    "taskId" : "6a0fb3313718b9414d531f59",
-    "transformUuid" : "1779413851249",
+    "taskId" : "69d4a8bdb6efdbdde6c71f7c",
+    "transformUuid" : "1775544509724",
     "user_id" : "62bc5008d4958d013d97c7a6",
     "username" : "admin@admin.com"
   }
