@@ -48,15 +48,6 @@
       "id" : "query_field_min_max_value_function",
       "type" : 11
     }, {
-      "id" : "transaction_begin_function",
-      "type" : 11
-    }, {
-      "id" : "transaction_commit_function",
-      "type" : 11
-    }, {
-      "id" : "transaction_rollback_function",
-      "type" : 11
-    }, {
       "id" : "get_table_info_function",
       "type" : 11
     }, {
@@ -81,9 +72,6 @@
       "type" : 20
     }, {
       "id" : "api_server_supported",
-      "type" : 20
-    }, {
-      "id" : "source_support_exactly_once",
       "type" : 20
     } ],
     "config" : {
@@ -193,7 +181,7 @@
     },
     "schema" : { },
     "schemaUpdateHour" : "default",
-    "schemaVersion" : "e2cd4f50-5ecf-4504-8e38-baabbb3a2aea",
+    "schemaVersion" : "ca25d9b9-d781-45e2-9232-ca385bb68d49",
     "shareCDCExternalStorageId" : "",
     "shareCdcEnable" : false,
     "submit" : true,

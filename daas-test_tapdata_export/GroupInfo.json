@@ -6,17 +6,25 @@
       "branch" : "main",
       "repoUrl" : "https://github.com/tap-jason/daas-test.git"
     },
-    "id" : "6a103d77e9ef93a25c4c0c1c",
+    "id" : "6a129a995a74057177d564e3",
     "name" : "daas-test",
-    "resetTaskList" : [ ],
+    "resetTaskList" : [ "6a12974e5a74057177d43a00", "6a1297ff5a74057177d471ab" ],
     "resourceItemList" : [ {
       "id" : "6a102cb0e9ef93a25c46fcf0",
       "name" : "开发任务-cicd",
       "type" : "SYNC_TASK"
     }, {
-      "id" : "6a1034b6e9ef93a25c4968e6",
-      "name" : "开发任务-cicd - 2",
+      "id" : "6a12974e5a74057177d43a00",
+      "name" : "CICD-FDM",
+      "type" : "MIGRATE_TASK"
+    }, {
+      "id" : "6a1297ff5a74057177d471ab",
+      "name" : "CICD_MDM",
       "type" : "SYNC_TASK"
+    }, {
+      "id" : "6a1299db5a74057177d514b6",
+      "name" : "MDM_CICD_API",
+      "type" : "MODULE"
     } ],
     "user_id" : "62bc5008d4958d013d97c7a6"
   }
