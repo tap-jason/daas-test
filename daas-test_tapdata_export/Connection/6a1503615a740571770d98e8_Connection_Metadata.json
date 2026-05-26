@@ -3005,6 +3005,26 @@
       "useDefaultValue" : true
     }, {
       "autoincrement" : "NO",
+      "columnPosition" : 1,
+      "data_type" : "DATE_TIME",
+      "default_value" : null,
+      "field_name" : "date",
+      "id" : "6a1503615a740571770d98e8_cicd_date",
+      "is_auto_allowed" : true,
+      "is_deleted" : false,
+      "is_nullable" : true,
+      "originalDataType" : "DATE_TIME",
+      "original_field_name" : "date",
+      "previousDataType" : "DATE_TIME",
+      "previousFieldName" : "date",
+      "primaryKey" : false,
+      "source" : "auto",
+      "sourceDbType" : "MongoDB",
+      "tapType" : "{\"defaultFraction\":3,\"fraction\":3,\"max\":\"9999-12-31T23:59:59.999Z\",\"min\":\"1000-01-01T00:00:00.001Z\",\"type\":1}",
+      "unique" : false,
+      "useDefaultValue" : true
+    }, {
+      "autoincrement" : "NO",
       "columnPosition" : 2,
       "data_length" : 2,
       "data_precision" : 5,
@@ -3084,6 +3104,26 @@
       "tapType" : "{\"bit\":32,\"maxValue\":2147483647,\"minValue\":-2147483648,\"precision\":10,\"type\":8}",
       "unique" : false,
       "useDefaultValue" : true
+    }, {
+      "autoincrement" : "NO",
+      "columnPosition" : 5,
+      "data_type" : "STRING(2048)",
+      "default_value" : null,
+      "field_name" : "name",
+      "id" : "6a1503615a740571770d98e8_cicd_name",
+      "is_auto_allowed" : true,
+      "is_deleted" : false,
+      "is_nullable" : true,
+      "originalDataType" : "STRING(2048)",
+      "original_field_name" : "name",
+      "previousDataType" : "STRING(2048)",
+      "previousFieldName" : "name",
+      "primaryKey" : false,
+      "source" : "auto",
+      "sourceDbType" : "MongoDB",
+      "tapType" : "{\"bytes\":2048,\"type\":10}",
+      "unique" : false,
+      "useDefaultValue" : true
     } ],
     "hasPrimaryKey" : false,
     "hasTransformEx" : false,
@@ -3091,7 +3131,6 @@
     "hasUpdateField" : false,
     "id" : "6a1548ff02782bbf46a0a71b",
     "indices" : [ {
-      "clustered" : "false",
       "columns" : [ {
         "columnIsAsc" : true,
         "columnName" : "GdDm",
