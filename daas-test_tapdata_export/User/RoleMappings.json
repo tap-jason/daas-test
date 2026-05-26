@@ -4685,4 +4685,229 @@
     "roleId" : "5b9a0a383fcba02649524bf1",
     "self_only" : false
   }
+}, {
+  "collectionName" : "RoleMapping",
+  "json" : {
+    "_id" : "6a1502b65a740571770d199c",
+    "principalId" : "v2_data_replication_creation",
+    "principalType" : "PERMISSION",
+    "roleId" : "5d31ae1ab953565ded04badd",
+    "user_id" : "62bc5008d4958d013d97c7a6"
+  }
+}, {
+  "collectionName" : "RoleMapping",
+  "json" : {
+    "_id" : "6a1502b65a740571770d199d",
+    "principalId" : "v2_data_replication_copy",
+    "principalType" : "PERMISSION",
+    "roleId" : "5d31ae1ab953565ded04badd",
+    "user_id" : "62bc5008d4958d013d97c7a6"
+  }
+}, {
+  "collectionName" : "RoleMapping",
+  "json" : {
+    "_id" : "6a1502b65a740571770d199e",
+    "principalId" : "v2_data_replication_import",
+    "principalType" : "PERMISSION",
+    "roleId" : "5d31ae1ab953565ded04badd",
+    "user_id" : "62bc5008d4958d013d97c7a6"
+  }
+}, {
+  "collectionName" : "RoleMapping",
+  "json" : {
+    "_id" : "6a1502b65a740571770d199f",
+    "principalId" : "v2_data_replication_export",
+    "principalType" : "PERMISSION",
+    "roleId" : "5d31ae1ab953565ded04badd",
+    "user_id" : "62bc5008d4958d013d97c7a6"
+  }
+}, {
+  "collectionName" : "RoleMapping",
+  "json" : {
+    "_id" : "6a1502b65a740571770d19a0",
+    "principalId" : "v2_data_flow_creation",
+    "principalType" : "PERMISSION",
+    "roleId" : "5d31ae1ab953565ded04badd",
+    "user_id" : "62bc5008d4958d013d97c7a6"
+  }
+}, {
+  "collectionName" : "RoleMapping",
+  "json" : {
+    "_id" : "6a1502b65a740571770d19a1",
+    "principalId" : "v2_data_flow_copy",
+    "principalType" : "PERMISSION",
+    "roleId" : "5d31ae1ab953565ded04badd",
+    "user_id" : "62bc5008d4958d013d97c7a6"
+  }
+}, {
+  "collectionName" : "RoleMapping",
+  "json" : {
+    "_id" : "6a1502b65a740571770d19a2",
+    "principalId" : "v2_data_flow_import",
+    "principalType" : "PERMISSION",
+    "roleId" : "5d31ae1ab953565ded04badd",
+    "user_id" : "62bc5008d4958d013d97c7a6"
+  }
+}, {
+  "collectionName" : "RoleMapping",
+  "json" : {
+    "_id" : "6a1502b65a740571770d19a3",
+    "principalId" : "v2_data_flow_export",
+    "principalType" : "PERMISSION",
+    "roleId" : "5d31ae1ab953565ded04badd",
+    "user_id" : "62bc5008d4958d013d97c7a6"
+  }
+}, {
+  "collectionName" : "RoleMapping",
+  "json" : {
+    "_id" : "6a1502b65a740571770d19a4",
+    "principalId" : "v2_data-server-list_creation",
+    "principalType" : "PERMISSION",
+    "roleId" : "5d31ae1ab953565ded04badd",
+    "user_id" : "62bc5008d4958d013d97c7a6"
+  }
+}, {
+  "collectionName" : "RoleMapping",
+  "json" : {
+    "_id" : "6a1502b65a740571770d19a5",
+    "principalId" : "v2_data-server-list_copy",
+    "principalType" : "PERMISSION",
+    "roleId" : "5d31ae1ab953565ded04badd",
+    "user_id" : "62bc5008d4958d013d97c7a6"
+  }
+}, {
+  "collectionName" : "RoleMapping",
+  "json" : {
+    "_id" : "6a1502b65a740571770d19a6",
+    "principalId" : "v2_data-server-list_import",
+    "principalType" : "PERMISSION",
+    "roleId" : "5d31ae1ab953565ded04badd",
+    "user_id" : "62bc5008d4958d013d97c7a6"
+  }
+}, {
+  "collectionName" : "RoleMapping",
+  "json" : {
+    "_id" : "6a1502b65a740571770d19a7",
+    "principalId" : "v2_data-server-list_export",
+    "principalType" : "PERMISSION",
+    "roleId" : "5d31ae1ab953565ded04badd",
+    "user_id" : "62bc5008d4958d013d97c7a6"
+  }
+}, {
+  "collectionName" : "RoleMapping",
+  "json" : {
+    "_id" : "6a1502b65a740571770d19a8",
+    "principalId" : "v2_api-client_creation",
+    "principalType" : "PERMISSION",
+    "roleId" : "5d31ae1ab953565ded04badd",
+    "user_id" : "62bc5008d4958d013d97c7a6"
+  }
+}, {
+  "collectionName" : "RoleMapping",
+  "json" : {
+    "_id" : "6a1502b65a740571770d19a9",
+    "principalId" : "v2_api-servers_creation",
+    "principalType" : "PERMISSION",
+    "roleId" : "5d31ae1ab953565ded04badd",
+    "user_id" : "62bc5008d4958d013d97c7a6"
+  }
+}, {
+  "collectionName" : "RoleMapping",
+  "json" : {
+    "_id" : "6a1502b65a740571770d19aa",
+    "principalId" : "v2_api-servers_download",
+    "principalType" : "PERMISSION",
+    "roleId" : "5d31ae1ab953565ded04badd",
+    "user_id" : "62bc5008d4958d013d97c7a6"
+  }
+}, {
+  "collectionName" : "RoleMapping",
+  "json" : {
+    "_id" : "6a1502b65a740571770d19ab",
+    "principalId" : "v2_api-servers_download",
+    "principalType" : "PERMISSION",
+    "roleId" : "5d31ae1ab953565ded04badd",
+    "user_id" : "62bc5008d4958d013d97c7a6"
+  }
+}, {
+  "collectionName" : "RoleMapping",
+  "json" : {
+    "_id" : "6a1503eb5a740571770dda8d",
+    "principalId" : "v2_project_management",
+    "principalType" : "PERMISSION",
+    "roleId" : "5d31ae1ab953565ded04badd",
+    "user_id" : "62bc5008d4958d013d97c7a6"
+  }
+}, {
+  "collectionName" : "RoleMapping",
+  "json" : {
+    "_id" : "6a1503eb5a740571770dda8e",
+    "principalId" : "v2_project_import_and_export",
+    "principalType" : "PERMISSION",
+    "roleId" : "5d31ae1ab953565ded04badd",
+    "user_id" : "62bc5008d4958d013d97c7a6"
+  }
+}, {
+  "collectionName" : "RoleMapping",
+  "json" : {
+    "_id" : "6a1503eb5a740571770dda8f",
+    "principalId" : "v2_user_management_menu",
+    "principalType" : "PERMISSION",
+    "roleId" : "5d31ae1ab953565ded04badd",
+    "user_id" : "62bc5008d4958d013d97c7a6"
+  }
+}, {
+  "collectionName" : "RoleMapping",
+  "json" : {
+    "_id" : "6a1503eb5a740571770dda90",
+    "principalId" : "v2_role_management",
+    "principalType" : "PERMISSION",
+    "roleId" : "5d31ae1ab953565ded04badd",
+    "user_id" : "62bc5008d4958d013d97c7a6"
+  }
+}, {
+  "collectionName" : "RoleMapping",
+  "json" : {
+    "_id" : "6a1503eb5a740571770dda91",
+    "principalId" : "v2_user_management_menu",
+    "principalType" : "PERMISSION",
+    "roleId" : "5d31ae1ab953565ded04badd",
+    "user_id" : "62bc5008d4958d013d97c7a6"
+  }
+}, {
+  "collectionName" : "RoleMapping",
+  "json" : {
+    "_id" : "6a1503eb5a740571770dda92",
+    "principalId" : "v2_project_management",
+    "principalType" : "PERMISSION",
+    "roleId" : "5d31ae1ab953565ded04badd",
+    "user_id" : "62bc5008d4958d013d97c7a6"
+  }
+}, {
+  "collectionName" : "RoleMapping",
+  "json" : {
+    "_id" : "6a1503eb5a740571770dda93",
+    "principalId" : "v2_role_management",
+    "principalType" : "PERMISSION",
+    "roleId" : "5d31ae1ab953565ded04badd",
+    "user_id" : "62bc5008d4958d013d97c7a6"
+  }
+}, {
+  "collectionName" : "RoleMapping",
+  "json" : {
+    "_id" : "6a1503eb5a740571770dda94",
+    "principalId" : "v2_role_management_menu",
+    "principalType" : "PERMISSION",
+    "roleId" : "5d31ae1ab953565ded04badd",
+    "user_id" : "62bc5008d4958d013d97c7a6"
+  }
+}, {
+  "collectionName" : "RoleMapping",
+  "json" : {
+    "_id" : "6a1503eb5a740571770dda95",
+    "principalId" : "v2_role_edition",
+    "principalType" : "PERMISSION",
+    "roleId" : "5d31ae1ab953565ded04badd",
+    "user_id" : "62bc5008d4958d013d97c7a6"
+  }
 } ]

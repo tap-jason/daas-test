@@ -124,7 +124,7 @@
     "kafkaRetries" : 0,
     "lastUpdAt" : 1779603780685,
     "loadAllTables" : true,
-    "loadCount" : 0,
+    "loadCount" : 2,
     "loadFieldErrMsg" : "",
     "loadFieldsStatus" : "finished",
     "name" : "MDM",
@@ -142,11 +142,11 @@
         "sort" : 0,
         "status" : "passed"
       }, {
-        "fail_message" : "\"172.26.44.143:27017\"",
-        "required" : false,
+        "fail_message" : "[172.26.44.144:27017]",
+        "required" : true,
         "show_msg" : "Check host port is valid",
         "sort" : 0,
-        "status" : "failed"
+        "status" : "passed"
       }, {
         "fail_message" : "login succeed!",
         "required" : true,
@@ -178,11 +178,11 @@
     },
     "schema" : { },
     "schemaUpdateHour" : "default",
-    "schemaVersion" : "72d1c300-d979-4f41-9155-1c57c7bd673a",
+    "schemaVersion" : "abb6e359-4311-4e3a-86e6-2a519703430e",
     "shareCDCExternalStorageId" : "",
     "shareCdcEnable" : false,
     "submit" : true,
-    "tableCount" : 3,
+    "tableCount" : 2,
     "testCount" : 0,
     "timeDifference" : 0,
     "user_id" : "62bc5008d4958d013d97c7a6"

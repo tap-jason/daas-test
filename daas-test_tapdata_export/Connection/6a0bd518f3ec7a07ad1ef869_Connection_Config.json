@@ -123,7 +123,7 @@
     "kafkaRetries" : 0,
     "lastUpdAt" : 1779603780781,
     "loadAllTables" : true,
-    "loadCount" : 2,
+    "loadCount" : 21,
     "loadFieldErrMsg" : "",
     "loadFieldsStatus" : "finished",
     "name" : "FDM",
@@ -141,11 +141,11 @@
         "sort" : 0,
         "status" : "passed"
       }, {
-        "fail_message" : "\"172.26.44.143:27017\"",
-        "required" : false,
+        "fail_message" : "[172.26.44.144:27017]",
+        "required" : true,
         "show_msg" : "Check host port is valid",
         "sort" : 0,
-        "status" : "failed"
+        "status" : "passed"
       }, {
         "fail_message" : "login succeed!",
         "required" : true,
@@ -176,10 +176,10 @@
       } ]
     },
     "schemaUpdateHour" : "default",
-    "schemaVersion" : "29001c0d-4a27-4a50-9901-b21102f67be6",
+    "schemaVersion" : "fafde69a-87d9-4f34-b90e-90d6050cddbf",
     "shareCdcEnable" : false,
     "submit" : true,
-    "tableCount" : 3,
+    "tableCount" : 21,
     "testCount" : 0,
     "timeDifference" : 0,
     "user_id" : "62bc5008d4958d013d97c7a6"
