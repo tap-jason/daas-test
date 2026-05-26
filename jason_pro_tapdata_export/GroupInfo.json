@@ -1,0 +1,23 @@
+[ {
+  "collectionName" : "GroupInfo",
+  "json" : {
+    "description" : "",
+    "gitInfo" : {
+      "branch" : "main",
+      "repoUrl" : "https://github.com/tap-jason/daas-test.git"
+    },
+    "id" : "6a15061d5a740571770f96a8",
+    "name" : "jason_pro",
+    "resetTaskList" : [ ],
+    "resourceItemList" : [ {
+      "id" : "6a1503645a740571770d9903",
+      "name" : "USER_JOB",
+      "type" : "MIGRATE_TASK"
+    }, {
+      "id" : "6a15038b5a740571770d9a87",
+      "name" : "USER_JOB_DEV",
+      "type" : "SYNC_TASK"
+    } ],
+    "user_id" : "6a15028a5a740571770cdb07"
+  }
+} ]
