@@ -1,0 +1,32 @@
+[ {
+  "collectionName" : "User",
+  "json" : {
+    "_id" : "6a15028a5a740571770cdb07",
+    "account_status" : 1,
+    "completeGuide" : false,
+    "email" : "jason@tapdata.io",
+    "emailVerified" : true,
+    "emailVerified_from_frontend" : true,
+    "notification" : {
+      "connected" : {
+        "email" : false,
+        "sms" : false,
+        "weChat" : false
+      },
+      "connectionInterrupted" : {
+        "email" : false,
+        "sms" : false,
+        "weChat" : false
+      },
+      "stoppedByError" : {
+        "email" : false,
+        "sms" : false,
+        "weChat" : false
+      }
+    },
+    "password" : "$2a$10$q5NCPU8R4IZ4ciptCQvXn.KeJSm9klDrBxNqRSbw4QiikHDGILB3C",
+    "roleusers" : [ "5d31ae1ab953565ded04badd" ],
+    "user_id" : "62bc5008d4958d013d97c7a6",
+    "username" : "jason"
+  }
+} ]
