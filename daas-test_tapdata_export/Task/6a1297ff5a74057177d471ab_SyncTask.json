@@ -471,6 +471,7 @@
     "isOpenAutoDDL" : false,
     "isSchedule" : false,
     "isStopOnError" : true,
+    "ldpType" : "mdm",
     "name" : "CICD_MDM",
     "normalTask" : true,
     "oldVersionTimezone" : false,

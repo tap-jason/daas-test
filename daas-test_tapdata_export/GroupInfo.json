@@ -6,9 +6,9 @@
       "branch" : "main",
       "repoUrl" : "https://github.com/tap-jason/daas-test.git"
     },
-    "id" : "6a12a7765a74057177d94317",
+    "id" : "6a154226fb1ae8d381de01c8",
     "name" : "daas-test",
-    "resetTaskList" : [ ],
+    "resetTaskList" : [ "6a12974e5a74057177d43a00" ],
     "resourceItemList" : [ {
       "id" : "6a102cb0e9ef93a25c46fcf0",
       "name" : "开发任务-cicd",
