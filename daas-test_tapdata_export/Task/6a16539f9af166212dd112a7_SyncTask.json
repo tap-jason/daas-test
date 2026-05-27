@@ -120,6 +120,7 @@
         "attrs" : {
           "accessNodeProcessId" : "",
           "accessNodeType" : "AUTOMATIC_PLATFORM_ALLOCATION",
+          "capabilities" : [ ],
           "connectionName" : "JASON_MONGODB",
           "connectionType" : "source_and_target",
           "db_version" : "4.4.23",
@@ -196,6 +197,7 @@
           "unit" : "SECOND"
         } ],
         "attrs" : {
+          "capabilities" : [ ],
           "position" : [ 1002, 443.5 ]
         },
         "catalog" : "processor",
@@ -205,7 +207,7 @@
         "id" : "2be322db-51c5-45d3-a8cc-38be1232f508",
         "isTransformed" : false,
         "name" : "item",
-        "script" : "function process(record){\n\n\t// Enter your code here\n\treturn record;\n}",
+        "script" : "function process(record){\n\n\t// Enter your code here\n\t\n\treturn record;\n}",
         "type" : "standard_js_processor"
       }, {
         "alarmRules" : [ {
@@ -225,6 +227,7 @@
           "unit" : "SECOND"
         } ],
         "attrs" : {
+          "capabilities" : [ ],
           "position" : [ 1033, 572.5 ]
         },
         "catalog" : "processor",
@@ -234,7 +237,7 @@
         "id" : "68c779a4-0edb-4252-a997-5474e4899e81",
         "isTransformed" : false,
         "name" : "orders",
-        "script" : "function process(record){\n\n\t// Enter your code here\n\treturn record;\n}",
+        "script" : "function process(record){\n\n\t// Enter your code here\n\t\n\trecord.order_detail = 'tapdata add detail';\n\treturn record;\n}",
         "type" : "standard_js_processor"
       }, {
         "alarmRules" : [ {
@@ -254,6 +257,7 @@
           "unit" : "SECOND"
         } ],
         "attrs" : {
+          "capabilities" : [ ],
           "position" : [ 1397, 499.5 ]
         },
         "catalog" : "processor",
@@ -310,6 +314,7 @@
         "attrs" : {
           "accessNodeProcessId" : "",
           "accessNodeType" : "AUTOMATIC_PLATFORM_ALLOCATION",
+          "capabilities" : [ ],
           "connectionName" : "JASON_MONGODB",
           "connectionType" : "source_and_target",
           "db_version" : "4.4.23",
@@ -389,6 +394,7 @@
         "attrs" : {
           "accessNodeProcessId" : "",
           "accessNodeType" : "AUTOMATIC_PLATFORM_ALLOCATION",
+          "capabilities" : [ ],
           "connectionName" : "JASON_MONGODB",
           "connectionType" : "source_and_target",
           "db_version" : "4.4.23",
@@ -756,7 +762,7 @@
     },
     "sourceType" : "VIRTUAL",
     "taskId" : "6a16539f9af166212dd112a7",
-    "transformUuid" : "1779848336309",
+    "transformUuid" : "1779852110356",
     "user_id" : "62bc5008d4958d013d97c7a6",
     "username" : "admin@admin.com"
   }
@@ -994,7 +1000,7 @@
     },
     "sourceType" : "VIRTUAL",
     "taskId" : "6a16539f9af166212dd112a7",
-    "transformUuid" : "1779848336309",
+    "transformUuid" : "1779852110356",
     "user_id" : "62bc5008d4958d013d97c7a6",
     "username" : "admin@admin.com"
   }
@@ -1099,6 +1105,25 @@
     }, {
       "autoincrement" : "NO",
       "columnPosition" : 5,
+      "data_type" : "STRING(1024)",
+      "default_value" : null,
+      "field_name" : "order_detail",
+      "id" : "6a1663564623799b8818dc99",
+      "is_auto_allowed" : true,
+      "is_deleted" : false,
+      "is_nullable" : true,
+      "original_field_name" : "order_detail",
+      "previousDataType" : "STRING(1024)",
+      "previousFieldName" : "order_detail",
+      "primaryKey" : false,
+      "source" : "auto",
+      "sourceDbType" : "MongoDB",
+      "tapType" : "{\"bytes\":1024,\"type\":10}",
+      "unique" : false,
+      "useDefaultValue" : true
+    }, {
+      "autoincrement" : "NO",
+      "columnPosition" : 5,
       "createSource" : "auto",
       "dataTypeTemp" : "INT32",
       "data_type" : "INT32",
@@ -1186,7 +1211,7 @@
     },
     "sourceType" : "VIRTUAL",
     "taskId" : "6a16539f9af166212dd112a7",
-    "transformUuid" : "1779848336309",
+    "transformUuid" : "1779852110356",
     "user_id" : "62bc5008d4958d013d97c7a6",
     "username" : "admin@admin.com"
   }
@@ -1398,6 +1423,26 @@
       "autoincrement" : "NO",
       "columnPosition" : 5,
       "createSource" : "auto",
+      "data_type" : "STRING(1024)",
+      "default_value" : null,
+      "field_name" : "order_detail",
+      "id" : "6a1663564623799b8818dc99",
+      "is_auto_allowed" : true,
+      "is_deleted" : false,
+      "is_nullable" : true,
+      "original_field_name" : "order_detail",
+      "previousDataType" : "STRING(1024)",
+      "previousFieldName" : "order_detail",
+      "primaryKey" : false,
+      "source" : "auto",
+      "sourceDbType" : "MongoDB",
+      "tapType" : "{\"bytes\":1024,\"type\":10}",
+      "unique" : false,
+      "useDefaultValue" : true
+    }, {
+      "autoincrement" : "NO",
+      "columnPosition" : 5,
+      "createSource" : "auto",
       "dataTypeTemp" : "INT32",
       "data_type" : "INT32",
       "default_value" : null,
@@ -1544,7 +1589,7 @@
     },
     "sourceType" : "VIRTUAL",
     "taskId" : "6a16539f9af166212dd112a7",
-    "transformUuid" : "1779848336309",
+    "transformUuid" : "1779852110356",
     "user_id" : "62bc5008d4958d013d97c7a6",
     "username" : "admin@admin.com"
   }
@@ -1745,7 +1790,7 @@
       "storageSize" : 20480
     },
     "taskId" : "6a16539f9af166212dd112a7",
-    "transformUuid" : "1779848336309",
+    "transformUuid" : "1779852110356",
     "user_id" : "62bc5008d4958d013d97c7a6",
     "username" : "admin@admin.com"
   }
@@ -2039,6 +2084,27 @@
       "autoincrement" : "NO",
       "columnPosition" : 5,
       "createSource" : "auto",
+      "dataTypeTemp" : "STRING(1024)",
+      "data_type" : "STRING(1024)",
+      "default_value" : null,
+      "field_name" : "order_detail",
+      "id" : "6a16630a4623799b8818d8f2",
+      "is_auto_allowed" : true,
+      "is_deleted" : false,
+      "is_nullable" : true,
+      "original_field_name" : "order_detail",
+      "previousDataType" : "STRING(1024)",
+      "previousFieldName" : "order_detail",
+      "primaryKey" : false,
+      "source" : "auto",
+      "sourceDbType" : "MongoDB",
+      "tapType" : "{\"bytes\":1024,\"type\":10}",
+      "unique" : false,
+      "useDefaultValue" : true
+    }, {
+      "autoincrement" : "NO",
+      "columnPosition" : 5,
+      "createSource" : "auto",
       "dataTypeTemp" : "INT32",
       "data_type" : "INT32",
       "default_value" : null,
@@ -2062,6 +2128,10 @@
       "item" : {
         "dataTypes" : [ "ARRAY" ],
         "lastMatchedDataType" : "ARRAY"
+      },
+      "order_detail" : {
+        "dataTypes" : [ "NULL", "STRING(1024)" ],
+        "lastMatchedDataType" : "NULL"
       }
     },
     "hasPrimaryKey" : true,
@@ -2110,7 +2180,7 @@
     },
     "sourceType" : "VIRTUAL",
     "taskId" : "6a16539f9af166212dd112a7",
-    "transformUuid" : "1779848336309",
+    "transformUuid" : "1779852110356",
     "user_id" : "62bc5008d4958d013d97c7a6",
     "username" : "admin@admin.com"
   }
