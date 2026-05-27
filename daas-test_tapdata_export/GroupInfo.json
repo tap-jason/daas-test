@@ -6,32 +6,20 @@
       "branch" : "main",
       "repoUrl" : "https://github.com/tap-jason/daas-test.git"
     },
-    "id" : "6a154ce59af166212dc68f04",
+    "id" : "6a16559b9af166212dd34509",
     "name" : "daas-test",
-    "resetTaskList" : [ "6a154801fb1ae8d381ec418d" ],
+    "resetTaskList" : [ ],
     "resourceItemList" : [ {
-      "id" : "6a102cb0e9ef93a25c46fcf0",
-      "name" : "开发任务-cicd",
-      "type" : "SYNC_TASK"
-    }, {
-      "id" : "6a12974e5a74057177d43a00",
-      "name" : "CICD-FDM",
+      "id" : "6a1653079af166212dd055d3",
+      "name" : "JASON_FDM",
       "type" : "MIGRATE_TASK"
     }, {
-      "id" : "6a1297ff5a74057177d471ab",
-      "name" : "CICD_MDM",
+      "id" : "6a16539f9af166212dd112a7",
+      "name" : "jason_MDM",
       "type" : "SYNC_TASK"
     }, {
-      "id" : "6a1299db5a74057177d514b6",
-      "name" : "MDM_CICD_API",
-      "type" : "MODULE"
-    }, {
-      "id" : "6a154801fb1ae8d381ec418d",
-      "name" : "cicd-api-job",
-      "type" : "SYNC_TASK"
-    }, {
-      "id" : "6a15492e9af166212dbd6c5e",
-      "name" : "cicd-api",
+      "id" : "6a16555c9af166212dd2e87e",
+      "name" : "jason_api",
       "type" : "MODULE"
     } ],
     "user_id" : "62bc5008d4958d013d97c7a6"
