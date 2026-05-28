@@ -184,7 +184,7 @@
     "kafkaRetries" : 0,
     "lastUpdAt" : 1779438908235,
     "loadAllTables" : true,
-    "loadCount" : 389,
+    "loadCount" : 390,
     "loadFieldErrMsg" : "",
     "loadFieldsStatus" : "finished",
     "name" : "JASON_MSSQL",
@@ -220,11 +220,11 @@
         "sort" : 0,
         "status" : "passed"
       }, {
-        "fail_message" : "Create,Insert,Update,Delete,Drop succeed",
+        "fail_message" : "There is already an object named 'tap___test' in the database.",
         "required" : true,
         "show_msg" : "Write",
         "sort" : 0,
-        "status" : "passed"
+        "status" : "failed"
       }, {
         "required" : true,
         "show_msg" : "Check Read for table privilege",
@@ -236,6 +236,12 @@
         "sort" : 0,
         "status" : "passed"
       }, {
+        "fail_message" : "Time difference between engine and data source is 1041ms,Please manually calibrate the time of the engine and data source.",
+        "required" : false,
+        "show_msg" : "Time detection",
+        "sort" : 0,
+        "status" : "failed"
+      }, {
         "fail_message" : "113.98.206.142:1433",
         "required" : true,
         "show_msg" : "Datasource instance info",
@@ -245,13 +251,13 @@
     },
     "schema" : { },
     "schemaUpdateHour" : "default",
-    "schemaVersion" : "d584e620-8249-4303-9c1b-0365300cf418",
+    "schemaVersion" : "73609d7a-e937-4996-95df-b1131b81629f",
     "shareCDCExternalStorageId" : "",
     "shareCdcEnable" : false,
     "submit" : true,
-    "tableCount" : 389,
-    "testCount" : 0,
-    "timeDifference" : 0,
+    "tableCount" : 390,
+    "testCount" : 1,
+    "timeDifference" : 1041,
     "user_id" : "62bc5008d4958d013d97c7a6"
   }
 } ]
