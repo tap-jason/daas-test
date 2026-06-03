@@ -72,7 +72,7 @@
     "autoInspect" : false,
     "blankLog" : false,
     "canOpenInspect" : false,
-    "cdctask" : false,
+    "cdctask" : true,
     "createTime" : 1779931326850,
     "createUser" : "admin@admin.com",
     "crontabExpressionFlag" : false,
@@ -103,6 +103,7 @@
         "attrs" : {
           "accessNodeProcessId" : "",
           "accessNodeType" : "AUTOMATIC_PLATFORM_ALLOCATION",
+          "capabilities" : [ ],
           "connectionName" : "JASON_MONGODB",
           "connectionType" : "source_and_target",
           "db_version" : "4.4.23",
@@ -180,6 +181,7 @@
         "attrs" : {
           "accessNodeProcessId" : "",
           "accessNodeType" : "AUTOMATIC_PLATFORM_ALLOCATION",
+          "capabilities" : [ ],
           "connectionName" : "JASON_MONGODB",
           "connectionType" : "source_and_target",
           "db_version" : "4.4.23",
@@ -248,7 +250,7 @@
     "increOperationMode" : false,
     "increSyncConcurrency" : false,
     "increaseReadSize" : 1,
-    "initialSyncTask" : true,
+    "initialSyncTask" : false,
     "isAutoCreateIndex" : true,
     "isAutoInspect" : false,
     "isEdit" : false,
@@ -287,7 +289,7 @@
     "testUsingPreview" : false,
     "transformDagHash" : 0,
     "transformProcess" : 0.0,
-    "type" : "initial_sync+cdc",
+    "type" : "cdc",
     "user_id" : "62bc5008d4958d013d97c7a6",
     "writeBatchSize" : 0,
     "writeBatchWaitMs" : 0,
@@ -678,7 +680,7 @@
     },
     "sourceType" : "VIRTUAL",
     "taskId" : "6a1798be9af166212d1c6c19",
-    "transformUuid" : "1779931385430",
+    "transformUuid" : "1780475519400",
     "user_id" : "62bc5008d4958d013d97c7a6",
     "username" : "admin@admin.com"
   }
@@ -1068,7 +1070,7 @@
     },
     "sourceType" : "VIRTUAL",
     "taskId" : "6a1798be9af166212d1c6c19",
-    "transformUuid" : "1779931385430",
+    "transformUuid" : "1780475519400",
     "user_id" : "62bc5008d4958d013d97c7a6",
     "username" : "admin@admin.com"
   }
