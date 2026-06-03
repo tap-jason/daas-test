@@ -6,9 +6,9 @@
       "branch" : "main",
       "repoUrl" : "https://github.com/tap-jason/daas-test.git"
     },
-    "id" : "6a1fe69b4c497de2acb5e630",
+    "id" : "6a1ff5b24c497de2acc570bf",
     "name" : "daas-test",
-    "resetTaskList" : [ "6a1653079af166212dd055d3" ],
+    "resetTaskList" : [ ],
     "resourceItemList" : [ {
       "id" : "6a1653079af166212dd055d3",
       "name" : "JASON_FDM",
