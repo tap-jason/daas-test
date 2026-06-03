@@ -21,32 +21,32 @@
     "alarmSettings" : [ {
       "interval" : 300,
       "key" : "TASK_STATUS_ERROR",
-      "notify" : [ "SYSTEM" ],
-      "open" : true,
+      "notify" : [ ],
+      "open" : false,
       "sort" : 1,
       "type" : "TASK",
       "unit" : "SECOND"
     }, {
       "interval" : 300,
       "key" : "TASK_FULL_COMPLETE",
-      "notify" : [ "SYSTEM" ],
-      "open" : true,
+      "notify" : [ ],
+      "open" : false,
       "sort" : 3,
       "type" : "TASK",
       "unit" : "SECOND"
     }, {
       "interval" : 300,
       "key" : "TASK_INCREMENT_START",
-      "notify" : [ "SYSTEM" ],
-      "open" : true,
+      "notify" : [ ],
+      "open" : false,
       "sort" : 4,
       "type" : "TASK",
       "unit" : "SECOND"
     }, {
       "interval" : 300,
       "key" : "TASK_INCREMENT_DELAY",
-      "notify" : [ "SYSTEM" ],
-      "open" : true,
+      "notify" : [ ],
+      "open" : false,
       "sort" : 6,
       "type" : "TASK",
       "unit" : "SECOND"
@@ -72,7 +72,7 @@
     "autoInspect" : false,
     "blankLog" : false,
     "canOpenInspect" : false,
-    "cdctask" : false,
+    "cdctask" : true,
     "createTime" : 1779847943678,
     "createUser" : "admin@admin.com",
     "crontabExpressionFlag" : false,
@@ -286,7 +286,7 @@
     "increOperationMode" : false,
     "increSyncConcurrency" : false,
     "increaseReadSize" : 1,
-    "initialSyncTask" : true,
+    "initialSyncTask" : false,
     "isAutoCreateIndex" : true,
     "isAutoInspect" : false,
     "isEdit" : false,
@@ -313,10 +313,11 @@
     "syncPoints" : [ {
       "connectionId" : "6a100e9385d8acd0349bfe22",
       "connectionName" : "JASON_MSSQL",
+      "dateTime" : 1780475461000,
       "isStreamOffset" : false,
       "nodeId" : "ee943d0d-700f-4895-8e06-6e81ecbad626",
       "nodeName" : "JASON_MSSQL",
-      "pointType" : "current",
+      "pointType" : "localTZ",
       "timeZone" : "+8"
     } ],
     "syncStatus" : "",
@@ -325,7 +326,7 @@
     "testUsingPreview" : false,
     "transformDagHash" : 0,
     "transformProcess" : 0.0,
-    "type" : "initial_sync+cdc",
+    "type" : "cdc",
     "user_id" : "62bc5008d4958d013d97c7a6",
     "writeBatchSize" : 0,
     "writeBatchWaitMs" : 0,
@@ -688,7 +689,7 @@
     },
     "sourceType" : "VIRTUAL",
     "taskId" : "6a1653079af166212dd055d3",
-    "transformUuid" : "1780470080393",
+    "transformUuid" : "1780475473484",
     "user_id" : "62bc5008d4958d013d97c7a6",
     "username" : "admin@admin.com"
   }
@@ -2006,7 +2007,7 @@
     },
     "sourceType" : "VIRTUAL",
     "taskId" : "6a1653079af166212dd055d3",
-    "transformUuid" : "1780470080393",
+    "transformUuid" : "1780475473484",
     "user_id" : "62bc5008d4958d013d97c7a6",
     "username" : "admin@admin.com"
   }
@@ -2164,7 +2165,7 @@
     },
     "sourceType" : "VIRTUAL",
     "taskId" : "6a1653079af166212dd055d3",
-    "transformUuid" : "1780470080393",
+    "transformUuid" : "1780475473484",
     "user_id" : "62bc5008d4958d013d97c7a6",
     "username" : "admin@admin.com"
   }
@@ -2554,7 +2555,7 @@
     },
     "sourceType" : "VIRTUAL",
     "taskId" : "6a1653079af166212dd055d3",
-    "transformUuid" : "1780470080393",
+    "transformUuid" : "1780475473484",
     "user_id" : "62bc5008d4958d013d97c7a6",
     "username" : "admin@admin.com"
   }
@@ -2741,7 +2742,7 @@
     },
     "sourceType" : "VIRTUAL",
     "taskId" : "6a1653079af166212dd055d3",
-    "transformUuid" : "1780470080393",
+    "transformUuid" : "1780475473484",
     "user_id" : "62bc5008d4958d013d97c7a6",
     "username" : "admin@admin.com"
   }
@@ -2967,7 +2968,7 @@
     },
     "sourceType" : "VIRTUAL",
     "taskId" : "6a1653079af166212dd055d3",
-    "transformUuid" : "1780470080393",
+    "transformUuid" : "1780475473484",
     "user_id" : "62bc5008d4958d013d97c7a6",
     "username" : "admin@admin.com"
   }
@@ -3128,7 +3129,7 @@
     },
     "sourceType" : "VIRTUAL",
     "taskId" : "6a1653079af166212dd055d3",
-    "transformUuid" : "1780470080393",
+    "transformUuid" : "1780475473484",
     "user_id" : "62bc5008d4958d013d97c7a6",
     "username" : "admin@admin.com"
   }
@@ -3286,7 +3287,7 @@
     },
     "sourceType" : "VIRTUAL",
     "taskId" : "6a1653079af166212dd055d3",
-    "transformUuid" : "1780470080393",
+    "transformUuid" : "1780475473484",
     "user_id" : "62bc5008d4958d013d97c7a6",
     "username" : "admin@admin.com"
   }
@@ -3444,7 +3445,7 @@
     },
     "sourceType" : "VIRTUAL",
     "taskId" : "6a1653079af166212dd055d3",
-    "transformUuid" : "1780470080393",
+    "transformUuid" : "1780475473484",
     "user_id" : "62bc5008d4958d013d97c7a6",
     "username" : "admin@admin.com"
   }
@@ -3602,7 +3603,7 @@
     },
     "sourceType" : "VIRTUAL",
     "taskId" : "6a1653079af166212dd055d3",
-    "transformUuid" : "1780470080393",
+    "transformUuid" : "1780475473484",
     "user_id" : "62bc5008d4958d013d97c7a6",
     "username" : "admin@admin.com"
   }
@@ -3875,7 +3876,7 @@
     },
     "sourceType" : "VIRTUAL",
     "taskId" : "6a1653079af166212dd055d3",
-    "transformUuid" : "1780470080393",
+    "transformUuid" : "1780475473484",
     "user_id" : "62bc5008d4958d013d97c7a6",
     "username" : "admin@admin.com"
   }
@@ -5391,7 +5392,7 @@
     },
     "sourceType" : "VIRTUAL",
     "taskId" : "6a1653079af166212dd055d3",
-    "transformUuid" : "1780470080393",
+    "transformUuid" : "1780475473484",
     "user_id" : "62bc5008d4958d013d97c7a6",
     "username" : "admin@admin.com"
   }
@@ -5588,7 +5589,7 @@
     },
     "sourceType" : "VIRTUAL",
     "taskId" : "6a1653079af166212dd055d3",
-    "transformUuid" : "1780470080393",
+    "transformUuid" : "1780475473484",
     "user_id" : "62bc5008d4958d013d97c7a6",
     "username" : "admin@admin.com"
   }
@@ -6040,7 +6041,7 @@
     },
     "sourceType" : "VIRTUAL",
     "taskId" : "6a1653079af166212dd055d3",
-    "transformUuid" : "1780470080393",
+    "transformUuid" : "1780475473484",
     "user_id" : "62bc5008d4958d013d97c7a6",
     "username" : "admin@admin.com"
   }
@@ -6269,7 +6270,7 @@
     },
     "sourceType" : "VIRTUAL",
     "taskId" : "6a1653079af166212dd055d3",
-    "transformUuid" : "1780470080393",
+    "transformUuid" : "1780475473484",
     "user_id" : "62bc5008d4958d013d97c7a6",
     "username" : "admin@admin.com"
   }
@@ -6469,7 +6470,7 @@
     },
     "sourceType" : "VIRTUAL",
     "taskId" : "6a1653079af166212dd055d3",
-    "transformUuid" : "1780470080393",
+    "transformUuid" : "1780475473484",
     "user_id" : "62bc5008d4958d013d97c7a6",
     "username" : "admin@admin.com"
   }
@@ -6870,7 +6871,7 @@
     },
     "sourceType" : "VIRTUAL",
     "taskId" : "6a1653079af166212dd055d3",
-    "transformUuid" : "1780470080393",
+    "transformUuid" : "1780475473484",
     "user_id" : "62bc5008d4958d013d97c7a6",
     "username" : "admin@admin.com"
   }
@@ -7067,7 +7068,7 @@
     },
     "sourceType" : "VIRTUAL",
     "taskId" : "6a1653079af166212dd055d3",
-    "transformUuid" : "1780470080393",
+    "transformUuid" : "1780475473484",
     "user_id" : "62bc5008d4958d013d97c7a6",
     "username" : "admin@admin.com"
   }
@@ -7264,7 +7265,7 @@
     },
     "sourceType" : "VIRTUAL",
     "taskId" : "6a1653079af166212dd055d3",
-    "transformUuid" : "1780470080393",
+    "transformUuid" : "1780475473484",
     "user_id" : "62bc5008d4958d013d97c7a6",
     "username" : "admin@admin.com"
   }
@@ -7460,7 +7461,7 @@
     },
     "sourceType" : "VIRTUAL",
     "taskId" : "6a1653079af166212dd055d3",
-    "transformUuid" : "1780470080393",
+    "transformUuid" : "1780475473484",
     "user_id" : "62bc5008d4958d013d97c7a6",
     "username" : "admin@admin.com"
   }
@@ -7850,7 +7851,7 @@
     },
     "sourceType" : "VIRTUAL",
     "taskId" : "6a1653079af166212dd055d3",
-    "transformUuid" : "1780470080393",
+    "transformUuid" : "1780475473484",
     "user_id" : "62bc5008d4958d013d97c7a6",
     "username" : "admin@admin.com"
   }
@@ -8037,7 +8038,7 @@
     },
     "sourceType" : "VIRTUAL",
     "taskId" : "6a1653079af166212dd055d3",
-    "transformUuid" : "1780470080393",
+    "transformUuid" : "1780475473484",
     "user_id" : "62bc5008d4958d013d97c7a6",
     "username" : "admin@admin.com"
   }
@@ -8398,7 +8399,7 @@
     },
     "sourceType" : "VIRTUAL",
     "taskId" : "6a1653079af166212dd055d3",
-    "transformUuid" : "1780470080393",
+    "transformUuid" : "1780475473484",
     "user_id" : "62bc5008d4958d013d97c7a6",
     "username" : "admin@admin.com"
   }
@@ -9716,7 +9717,7 @@
     },
     "sourceType" : "VIRTUAL",
     "taskId" : "6a1653079af166212dd055d3",
-    "transformUuid" : "1780470080393",
+    "transformUuid" : "1780475473484",
     "user_id" : "62bc5008d4958d013d97c7a6",
     "username" : "admin@admin.com"
   }
@@ -9942,7 +9943,7 @@
     },
     "sourceType" : "VIRTUAL",
     "taskId" : "6a1653079af166212dd055d3",
-    "transformUuid" : "1780470080393",
+    "transformUuid" : "1780475473484",
     "user_id" : "62bc5008d4958d013d97c7a6",
     "username" : "admin@admin.com"
   }
@@ -10103,7 +10104,7 @@
     },
     "sourceType" : "VIRTUAL",
     "taskId" : "6a1653079af166212dd055d3",
-    "transformUuid" : "1780470080393",
+    "transformUuid" : "1780475473484",
     "user_id" : "62bc5008d4958d013d97c7a6",
     "username" : "admin@admin.com"
   }
@@ -10261,7 +10262,7 @@
     },
     "sourceType" : "VIRTUAL",
     "taskId" : "6a1653079af166212dd055d3",
-    "transformUuid" : "1780470080393",
+    "transformUuid" : "1780475473484",
     "user_id" : "62bc5008d4958d013d97c7a6",
     "username" : "admin@admin.com"
   }
@@ -10419,7 +10420,7 @@
     },
     "sourceType" : "VIRTUAL",
     "taskId" : "6a1653079af166212dd055d3",
-    "transformUuid" : "1780470080393",
+    "transformUuid" : "1780475473484",
     "user_id" : "62bc5008d4958d013d97c7a6",
     "username" : "admin@admin.com"
   }
@@ -10577,7 +10578,7 @@
     },
     "sourceType" : "VIRTUAL",
     "taskId" : "6a1653079af166212dd055d3",
-    "transformUuid" : "1780470080393",
+    "transformUuid" : "1780475473484",
     "user_id" : "62bc5008d4958d013d97c7a6",
     "username" : "admin@admin.com"
   }
@@ -10735,7 +10736,7 @@
     },
     "sourceType" : "VIRTUAL",
     "taskId" : "6a1653079af166212dd055d3",
-    "transformUuid" : "1780470080393",
+    "transformUuid" : "1780475473484",
     "user_id" : "62bc5008d4958d013d97c7a6",
     "username" : "admin@admin.com"
   }
