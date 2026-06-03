@@ -15,21 +15,24 @@ on:
         type: choice
         options:
           - dev
-          - sit     
-          - UAT
-          - PRE-PROD
-          - PROD
+          - sit
+          - lpt
+      project:
+        description: 'Project name (留空则取 vars.PROJECT_NAME，再回落到仓库名)'
+        required: false
+        type: string
+        default: ''
 
 jobs:
   deploy:
     # TODO: Replace {WORKER_REPO} with actual org/repo, e.g. your-org/tapdata-cicd-worker
-    uses: "tap-jason/jason_test_cicd/.github/workflows/tapdata-deploy.yml@main"
+    uses: "{WORKER_REPO}/.github/workflows/tapdata-deploy.yml@main"
     with:
-      project: ${{ github.event.repository.name }}
+      project: ${{ inputs.project || vars.PROJECT_NAME || github.event.repository.name }}
       target_env: ${{ inputs.target_env || '' }}
       caller_repo: ${{ github.repository }}
       caller_sha: ${{ github.sha }}
       caller_event: ${{ github.event_name }}
       caller_ref: ${{ github.ref }}
-      worker_repo: "tap-jason/jason_test_cicd"
+      worker_repo: "{WORKER_REPO}"
     secrets: inherit
