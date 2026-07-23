@@ -129,6 +129,7 @@
       "value" : "API"
     } ],
     "name" : "api_test",
+    "operationType" : "GET",
     "pathAccessMethod" : "customize",
     "pathSetting" : [ {
       "method" : "POST",
@@ -185,46 +186,6 @@
       }, {
         "autoincrement" : "NO",
         "columnPosition" : 5,
-        "data_type" : "INT32",
-        "default_value" : null,
-        "field_name" : "PageSize",
-        "id" : "6a60b1c311e9d7e503ecfe9e_AA_0114_TEST_PageSize",
-        "is_auto_allowed" : true,
-        "is_deleted" : false,
-        "is_nullable" : true,
-        "originalDataType" : "INT32",
-        "original_field_name" : "PageSize",
-        "previousDataType" : "INT32",
-        "previousFieldName" : "PageSize",
-        "primaryKey" : false,
-        "source" : "auto",
-        "sourceDbType" : "MongoDB",
-        "tapType" : "{\"bit\":32,\"maxValue\":2147483647,\"minValue\":-2147483648,\"precision\":10,\"type\":8}",
-        "unique" : false,
-        "useDefaultValue" : true
-      }, {
-        "autoincrement" : "NO",
-        "columnPosition" : 5,
-        "data_type" : "STRING(100)",
-        "default_value" : null,
-        "field_name" : "Title",
-        "id" : "6a60b1c311e9d7e503ecfe9e_AA_0114_TEST_Title",
-        "is_auto_allowed" : true,
-        "is_deleted" : false,
-        "is_nullable" : true,
-        "originalDataType" : "STRING(100)",
-        "original_field_name" : "Title",
-        "previousDataType" : "STRING(100)",
-        "previousFieldName" : "Title",
-        "primaryKey" : false,
-        "source" : "auto",
-        "sourceDbType" : "MongoDB",
-        "tapType" : "{\"bytes\":100,\"type\":10}",
-        "unique" : false,
-        "useDefaultValue" : true
-      }, {
-        "autoincrement" : "NO",
-        "columnPosition" : 5,
         "data_type" : "OBJECT_ID",
         "default_value" : null,
         "field_name" : "_id",
@@ -245,6 +206,7 @@
         "useDefaultValue" : true
       } ],
       "fullCustomQuery" : false,
+      "method" : "GET",
       "name" : "findPage",
       "params" : [ {
         "defaultvalue" : "1",
@@ -265,6 +227,7 @@
         "required" : false,
         "type" : "object"
       } ],
+      "path" : "",
       "result" : "Page<Document>",
       "sort" : [ ],
       "type" : "preset",
