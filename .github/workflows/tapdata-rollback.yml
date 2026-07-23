@@ -19,7 +19,7 @@ on:
         type: choice
         options:
           - sit
-          - lpt
+          - dev
           - aat
           - prod
       last_stable_tag:
