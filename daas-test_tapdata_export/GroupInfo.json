@@ -10,10 +10,6 @@
     "name" : "daas-test",
     "resetTaskList" : [ ],
     "resourceItemList" : [ {
-      "id" : "6a60b1cc11e9d7e503ecfebf",
-      "name" : "任务 1",
-      "type" : "SYNC_TASK"
-    }, {
       "id" : "6a61d63311e9d7e503f01c2d",
       "name" : "主从合并任务",
       "type" : "SYNC_TASK"
