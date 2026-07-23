@@ -21,6 +21,10 @@
       "id" : "6a61d75f11e9d7e503f0216e",
       "name" : "api_test",
       "type" : "MODULE"
+    }, {
+      "id" : "6a60b1cc11e9d7e503ecfebf",
+      "name" : "任务 1",
+      "type" : "SYNC_TASK"
     } ],
     "user_id" : "62bc5008d4958d013d97c7a6"
   }
